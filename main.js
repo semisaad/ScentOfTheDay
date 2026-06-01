@@ -39,10 +39,6 @@ function renderGrid(list) {
         <p class="perfume-number">No. ${num}</p>
         <h3 class="perfume-name">${p.name}</h3>
         <p class="perfume-family">${p.family}</p>
-        <p class="notes-label">Key Notes</p>
-        <div class="notes-list">
-          ${[...(p.top || []).slice(0,2), ...(p.middle || []).slice(0,1)].map(n => `<span class="note-tag">${n}</span>`).join('')}
-        </div>
         ${priceRange ? `<p class="perfume-price-range">${priceRange}</p>` : ''}
         <div class="card-cta-hint">View &amp; Order →</div>
       </div>
@@ -63,35 +59,6 @@ document.getElementById('collectionSearch').addEventListener('input', function (
   ));
 });
 
-/* ── Nav search ── */
-const navInput   = document.getElementById('navSearchInput');
-const navResults = document.getElementById('navSearchResults');
-
-navInput.addEventListener('input', function () {
-  const q = this.value.trim().toLowerCase();
-  if (!q) { navResults.classList.remove('open'); return; }
-
-  const matches = perfumes.filter(p =>
-    p.name.toLowerCase().includes(q) ||
-    p.family.toLowerCase().includes(q) ||
-    [...(p.top||[]), ...(p.middle||[]), ...(p.base||[])].some(n => n.toLowerCase().includes(q))
-  );
-
-  navResults.innerHTML = matches.length === 0
-    ? '<p class="search-empty">No results found</p>'
-    : matches.map(p => {
-        const i = perfumes.indexOf(p);
-        return `<div class="search-result-item" onclick="navGoTo(${i})">
-          <img class="sri-img" src="${p.img}" alt="${p.name}" onerror="this.style.display='none'">
-          <div class="sri-info">
-            <p class="sri-name">${p.name}</p>
-            <p class="sri-tagline">${p.family}</p>
-          </div>
-        </div>`;
-      }).join('');
-
-  navResults.classList.add('open');
-});
 
 function navGoTo(i) {
   navResults.classList.remove('open');
