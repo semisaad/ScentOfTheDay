@@ -38,10 +38,6 @@ function renderGrid(list) {
         <p class="perfume-number">No. ${num}</p>
         <h3 class="perfume-name">${p.name}</h3>
         <p class="perfume-family">${p.family}</p>
-        <p class="notes-label">Key Notes</p>
-        <div class="notes-list">
-          ${[...(p.top || []).slice(0,2), ...(p.middle || []).slice(0,1)].map(n => `<span class="note-tag">${n}</span>`).join('')}
-        </div>
         ${priceRange ? `<p class="perfume-price-range">${priceRange}</p>` : ''}
         <div class="card-cta-hint">View &amp; Order →</div>
       </div>

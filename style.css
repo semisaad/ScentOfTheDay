@@ -59,6 +59,7 @@ nav {
   gap: 2rem;
   list-style: none;
   flex-shrink: 0;
+  margin-left: auto;
 }
 .nav-links a {
   font-size: 0.7rem;
@@ -139,6 +140,57 @@ nav {
 }
 
 .hero-eyebrow {
+  margin: 2vh;footer {
+  padding: 4rem 5vw;
+  border-top: 1px solid var(--border);
+  background: var(--white);
+  
+  /* ── 3-Column Desktop Alignment ── */
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-logo { 
+  font-family: 'Cormorant Garamond', serif; 
+  font-size: 1.1rem; 
+  font-weight: 300; 
+  letter-spacing: 0.15em; 
+  text-transform: uppercase; 
+  color: var(--maroon);
+  text-align: left; /* Pushes brand name against the left boundary */
+}
+
+.footer-img {
+  height: 48px; /* Perfectly balanced size to avoid crowding */
+  width: auto;
+  object-fit: contain;
+  justify-self: center; /* Locks image to the absolute center grid column */
+}
+
+.footer-copy { 
+  font-size: 0.72rem; 
+  letter-spacing: 0.08em; 
+  color: var(--muted); 
+  text-align: right; /* Pushes copyright notice against the right boundary */
+}
+
+/* ── Responsive Mobile Adjustments ── */
+@media (max-width: 720px) {
+  footer {
+    grid-template-columns: 1fr; /* Switch to single-column stack */
+    justify-items: center;
+    text-align: center;
+    gap: 1.25rem;
+    padding: 3rem 5vw;
+  }
+  
+  .footer-logo, 
+  .footer-copy {
+    text-align: center;
+  }
+}
   font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
   color: var(--maroon); margin-bottom: 2rem;
   opacity: 0; animation: fadeUp 0.8s 0.2s forwards;
@@ -319,7 +371,7 @@ nav {
   border: 1px solid var(--border); padding: 0.18em 0.65em; background: var(--maroon-pale);
 }
 .perfume-price-range {
-  font-size: 0.8rem; font-weight: 400; color: var(--maroon);
+  font-size: 1.0rem; font-weight: 400; color: var(--maroon);
   border-top: 1px solid var(--border); padding-top: 0.75rem; margin-top: 0.5rem;
 }
 .card-cta-hint {
@@ -331,26 +383,56 @@ nav {
    FOOTER
    =================================================== */
 footer {
-  padding: 3rem 5vw;
+  padding: 4rem 5vw;
   border-top: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
   background: var(--white);
-  text-align: center;
+  
+  /* ── 3-Column Desktop Alignment ── */
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1.5rem;
 }
-.footer-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.4rem;
-  font-weight: 300;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--maroon);
-}
-.footer-copy { font-size: 0.68rem; letter-spacing: 0.08em; color: var(--muted); }
 
+.footer-logo { 
+  font-family: 'Cormorant Garamond', serif; 
+  font-size: 1.1rem; 
+  font-weight: 300; 
+  letter-spacing: 0.15em; 
+  text-transform: uppercase; 
+  color: var(--maroon);
+  text-align: left; /* Pushes brand name against the left boundary */
+}
+
+.footer-img {
+  height: 48px; /* Perfectly balanced size to avoid crowding */
+  width: auto;
+  object-fit: contain;
+  justify-self: center; /* Locks image to the absolute center grid column */
+}
+
+.footer-copy { 
+  font-size: 0.72rem; 
+  letter-spacing: 0.08em; 
+  color: var(--muted); 
+  text-align: right; /* Pushes copyright notice against the right boundary */
+}
+
+/* ── Responsive Mobile Adjustments ── */
+@media (max-width: 720px) {
+  footer {
+    grid-template-columns: 1fr; /* Switch to single-column stack */
+    justify-items: center;
+    text-align: center;
+    gap: 1.25rem;
+    padding: 3rem 5vw;
+  }
+  
+  .footer-logo, 
+  .footer-copy {
+    text-align: center;
+  }
+}
 /* ===================================================
    ANIMATIONS
    =================================================== */
