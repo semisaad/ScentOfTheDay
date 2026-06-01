@@ -252,14 +252,13 @@
     const delivOpt = DELIVERY_OPTIONS.find(o => o.key === selectedDelivery);
     const delivLabel = delivOpt ? delivOpt.label : 'Not selected';
 
-    let text = 'Hi! I\'d like to order the following from Scent Of The Day:\n\n';
+    let text = 'I\'d like to place an order for:\n\n';
     cart.forEach(item => {
       text += `• ${item.name} — ${item.ml}ml × ${item.qty}  (৳${item.price * item.qty})\n`;
     });
     text += `\nSubtotal:  ৳${subtotal}`;
     text += `\nDelivery:  ${delivLabel}${delivery > 0 ? ` (+৳${delivery})` : ''}`;
     text += `\nTotal:     ৳${total}`;
-    text += '\n\nPlease confirm availability and arrange delivery. Thank you!';
     return text;
   }
 
