@@ -64,5 +64,27 @@
     "base": ["Limestone Accord", "Cedarwood", "Orris Root"],
     "desc": "Fig & Stone captures a specific kind of afternoon: sun-warmed stone, a fig tree heavy with fruit, the faint green sharpness of broken leaves. It is Mediterranean in spirit — earthy, alive, unhurried. Neither floral nor strictly woody, it occupies a rare green space all of its own.\n\nFig is one of the most difficult ingredients to render without tipping into sweetness or artificiality. Here, the fig is kept honest — green and milky in the top and heart, grounded in the mineral quality of a limestone accord at the base. Cedarwood and orris root provide the woody anchor. The result is startlingly natural, like stepping into shade from bright sun.",
     "short": "Sun-warmed fig, stone, living green."
+  },
+  {
+    "name": "Lattafa Khamrah for men and women",
+    "tagline": "Earth · Green · Mediterranean",
+    "family": "Green Woody",
+    "img": "assets/khamrah.jpeg",
+    "top": ["Fig Leaf", "Green Accord", "Galbanum"],
+    "heart": ["Fig Milk", "Jasmine", "Rock Rose"],
+    "base": ["Limestone Accord", "Cedarwood", "Orris Root"],
+    "desc": "Fig & Stone captures a specific kind of afternoon: sun-warmed stone, a fig tree heavy with fruit, the faint green sharpness of broken leaves. It is Mediterranean in spirit — earthy, alive, unhurried. Neither floral nor strictly woody, it occupies a rare green space all of its own.\n\nFig is one of the most difficult ingredients to render without tipping into sweetness or artificiality. Here, the fig is kept honest — green and milky in the top and heart, grounded in the mineral quality of a limestone accord at the base. Cedarwood and orris root provide the woody anchor. The result is startlingly natural, like stepping into shade from bright sun.",
+    "short": "Sun-warmed fig, stone, living green."
+  },
+  {
+    "name": "Lattafa Khamrah Qahwa",
+    "tagline": "Earth · Green · Mediterranean",
+    "family": "Green Woody",
+    "img": "assets/qahwa.jpeg",
+    "top": ["Fig Leaf", "Green Accord", "Galbanum"],
+    "heart": ["Fig Milk", "Jasmine", "Rock Rose"],
+    "base": ["Limestone Accord", "Cedarwood", "Orris Root"],
+    "desc": "Fig & Stone captures a specific kind of afternoon: sun-warmed stone, a fig tree heavy with fruit, the faint green sharpness of broken leaves. It is Mediterranean in spirit — earthy, alive, unhurried. Neither floral nor strictly woody, it occupies a rare green space all of its own.\n\nFig is one of the most difficult ingredients to render without tipping into sweetness or artificiality. Here, the fig is kept honest — green and milky in the top and heart, grounded in the mineral quality of a limestone accord at the base. Cedarwood and orris root provide the woody anchor. The result is startlingly natural, like stepping into shade from bright sun.",
+    "short": "Sun-warmed fig, stone, living green."
   }
 ]
