@@ -613,8 +613,6 @@ footer {
 .ml-size { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 300; line-height: 1; }
 .ml-label { font-size: 0.58rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); transition: color 0.2s; }
 .ml-option.selected .ml-label { color: rgba(255,255,255,0.7); }
-.ml-price { font-size: 0.7rem; font-weight: 400; color: var(--maroon); margin-top: 0.1rem; transition: color 0.2s; }
-.ml-option.selected .ml-price { color: rgba(255,255,255,0.9); }
 .ml-check { position: absolute; top: 4px; right: 6px; font-size: 0.65rem; color: rgba(255,255,255,0.9); opacity: 0; transition: opacity 0.2s; }
 .ml-option.selected .ml-check { opacity: 1; }
 

@@ -73,13 +73,12 @@ function buildMLButtons(prices) {
     const btn = document.createElement('button');
     btn.className    = 'ml-option';
     btn.dataset.ml   = ml;
-    btn.dataset.price = price;
+    btn.dataset.price = price; // This keeps the price data attached to the button
     btn.type         = 'button';
     btn.innerHTML    = `
       <span class="ml-check">✓</span>
       <span class="ml-size">${ml}</span>
       <span class="ml-label">ml</span>
-      <span class="ml-price">৳${price}</span>
     `;
     btn.addEventListener('click', () => selectML(btn));
     container.appendChild(btn);
