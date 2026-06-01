@@ -54,54 +54,6 @@ nav {
   flex-shrink: 0;
 }
 
-.nav-center {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  min-width: 0;
-}
-
-.nav-search {
-  display: flex;
-  align-items: center;
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.25);
-  border-radius: 2px;
-  overflow: hidden;
-  width: 240px;
-  transition: background 0.2s, border-color 0.2s;
-}
-.nav-search:focus-within {
-  background: rgba(255,255,255,0.2);
-  border-color: rgba(255,255,255,0.5);
-}
-.nav-search input {
-  background: transparent;
-  border: none;
-  outline: none;
-  color: #fff;
-  font-family: 'Jost', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  padding: 0.5rem 0.75rem;
-  flex: 1;
-  min-width: 0;
-}
-.nav-search input::placeholder { color: rgba(255,255,255,0.5); }
-.nav-search button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem 0.75rem;
-  display: flex;
-  align-items: center;
-  color: rgba(255,255,255,0.7);
-  transition: color 0.2s;
-  flex-shrink: 0;
-}
-.nav-search button:hover { color: #fff; }
-
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -172,66 +124,20 @@ nav {
 .cart-badge.visible { display: flex; }
 
 /* ===================================================
-   NAV SEARCH DROPDOWN
-   =================================================== */
-.search-results {
-  display: none;
-  position: fixed;
-  top: 64px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 340px;
-  max-width: calc(100vw - 2rem);
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-top: 3px solid var(--maroon);
-  z-index: 200;
-  max-height: 360px;
-  overflow-y: auto;
-}
-.search-results.open { display: block; }
-
-.search-result-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.9rem 1.25rem;
-  cursor: pointer;
-  border-bottom: 1px solid var(--border);
-  transition: background 0.2s;
-}
-.search-result-item:last-child { border-bottom: none; }
-.search-result-item:hover { background: var(--maroon-pale); }
-
-.sri-img { width: 44px; height: 44px; object-fit: cover; flex-shrink: 0; border: 1px solid var(--border); }
-.sri-info { flex: 1; min-width: 0; }
-.sri-name { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 400; }
-.sri-tagline { font-size: 0.7rem; color: var(--muted); letter-spacing: 0.06em; }
-.search-empty { padding: 1.5rem; text-align: center; font-size: 0.8rem; color: var(--muted); }
-
-/* ===================================================
    HERO
    =================================================== */
 .hero {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 64px 5vw 0;
+  padding: 64px 5vw 4rem;
   position: relative;
   background: var(--white);
 }
-.hero::before {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 50%;
-  transform: translateX(-50%);
-  width: 1px; height: 80px;
-  background: linear-gradient(to bottom, transparent, var(--maroon));
-  opacity: 0.4;
-}
+
 .hero-eyebrow {
   font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
   color: var(--maroon); margin-bottom: 2rem;
@@ -291,11 +197,57 @@ nav {
 .divider { width: 40px; height: 1px; background: var(--maroon); opacity: 0.4; margin: 2rem 0; }
 
 /* ===================================================
+   COLLECTION SEARCH DROPDOWN
+   =================================================== */
+.collection-search-wrap { position: relative; display: flex; justify-content: center; margin-bottom: 3.5rem; }
+
+.collection-search-results {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 380px;
+  max-width: calc(100vw - 2rem);
+  background: var(--white);
+  border: 1px solid var(--maroon);
+  border-top: none;
+  z-index: 50;
+  max-height: 320px;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(107,30,46,0.1);
+}
+.collection-search-results.open { display: block; }
+
+.csr-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+.csr-item:last-child { border-bottom: none; }
+.csr-item:hover { background: var(--maroon-pale); }
+
+.csr-img {
+  width: 40px; height: 50px;
+  object-fit: cover; flex-shrink: 0;
+  background: var(--maroon-pale);
+}
+.csr-info { flex: 1; min-width: 0; }
+.csr-name { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 400; line-height: 1.2; }
+.csr-family { font-size: 0.65rem; letter-spacing: 0.08em; color: var(--muted); text-transform: uppercase; margin-top: 0.1rem; }
+.csr-price { font-size: 0.75rem; color: var(--maroon); font-weight: 400; white-space: nowrap; flex-shrink: 0; }
+
+.csr-empty { padding: 1.25rem; text-align: center; font-size: 0.8rem; color: var(--muted); }
+
+/* ===================================================
    COLLECTION
    =================================================== */
 .collection { padding: 8vw 5vw; background: var(--maroon-pale); }
 .collection-header { text-align: center; margin-bottom: 3rem; }
-.collection-search-wrap { display: flex; justify-content: center; margin-bottom: 3.5rem; }
 .collection-search {
   display: flex; align-items: center;
   border: 1px solid var(--maroon); background: var(--white);
@@ -379,13 +331,25 @@ nav {
    FOOTER
    =================================================== */
 footer {
-  padding: 4rem 5vw;
+  padding: 3rem 5vw;
   border-top: 1px solid var(--border);
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 1rem; background: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--white);
+  text-align: center;
 }
-.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; letter-spacing: 0.15em; text-transform: uppercase; color: var(--maroon); }
-.footer-copy { font-size: 0.72rem; letter-spacing: 0.08em; color: var(--muted); }
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--maroon);
+}
+.footer-copy { font-size: 0.68rem; letter-spacing: 0.08em; color: var(--muted); }
 
 /* ===================================================
    ANIMATIONS
@@ -558,13 +522,13 @@ footer {
 }
 .product-img-main {
   width: 100%;
-  height: 420px;          /* fixed height — not full-page tall */
+  height: 340px;          /* fixed height — not full-page tall */
   object-fit: cover;
   display: none;          /* shown by JS after load */
   background: var(--maroon-pale);
 }
 .product-img-placeholder {
-  width: 100%; height: 420px;
+  width: 100%; height: 340px;
   background: var(--maroon-pale);
   display: flex; align-items: center; justify-content: center;
   font-family: 'Cormorant Garamond', serif; font-size: 8rem; font-weight: 300;
@@ -613,6 +577,8 @@ footer {
 .ml-size { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 300; line-height: 1; }
 .ml-label { font-size: 0.58rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); transition: color 0.2s; }
 .ml-option.selected .ml-label { color: rgba(255,255,255,0.7); }
+.ml-price { font-size: 0.7rem; font-weight: 400; color: var(--maroon); margin-top: 0.1rem; transition: color 0.2s; }
+.ml-option.selected .ml-price { color: rgba(255,255,255,0.9); }
 .ml-check { position: absolute; top: 4px; right: 6px; font-size: 0.65rem; color: rgba(255,255,255,0.9); opacity: 0; transition: opacity 0.2s; }
 .ml-option.selected .ml-check { opacity: 1; }
 
@@ -683,18 +649,18 @@ footer {
   nav { padding: 0 4vw; height: 58px; gap: 0.6rem; }
   .nav-logo { font-size: 1rem; letter-spacing: 0.1em; }
   .nav-links { display: none; }
-  .nav-center { flex: 1; }
-  .nav-search { width: 120px; }
   .nav-cart-btn { padding: 0.35rem 0.65rem; font-size: 0.68rem; }
-  .search-results { top: 58px; }
 
-  .hero { padding-top: 58px; }
+  .hero { min-height: auto; padding: 90px 5vw 3rem; }
+  .hero-eyebrow { margin-bottom: 1.25rem; }
+  .hero-cta { margin-top: 2rem; }
 
   .about { grid-template-columns: 1fr; gap: 2rem; padding: 8vw 5vw; }
   .about-visual { aspect-ratio: 4/3; }
 
   .collection { padding: 6vw 4vw; }
   .collection-search-wrap { margin-bottom: 2rem; }
+  .collection-search-results { width: calc(100vw - 2rem); }
   .perfume-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .card-body { padding: 1rem 1rem 1.5rem; }
   .perfume-name { font-size: 1.25rem; }
@@ -720,5 +686,4 @@ footer {
 
 @media (max-width: 400px) {
   .perfume-grid { grid-template-columns: 1fr; }
-  .nav-search { width: 90px; }
 }

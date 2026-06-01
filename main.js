@@ -22,7 +22,6 @@ function renderGrid(list) {
     const i   = perfumes.indexOf(p);
     const num = String(i + 1).padStart(2, '0');
 
-    /* price range from prices object */
     const priceVals  = p.prices ? Object.values(p.prices) : [];
     const priceRange = priceVals.length
       ? `৳${Math.min(...priceVals)} – ৳${Math.max(...priceVals)}`
@@ -39,6 +38,10 @@ function renderGrid(list) {
         <p class="perfume-number">No. ${num}</p>
         <h3 class="perfume-name">${p.name}</h3>
         <p class="perfume-family">${p.family}</p>
+        <p class="notes-label">Key Notes</p>
+        <div class="notes-list">
+          ${[...(p.top || []).slice(0,2), ...(p.middle || []).slice(0,1)].map(n => `<span class="note-tag">${n}</span>`).join('')}
+        </div>
         ${priceRange ? `<p class="perfume-price-range">${priceRange}</p>` : ''}
         <div class="card-cta-hint">View &amp; Order →</div>
       </div>
@@ -48,27 +51,70 @@ function renderGrid(list) {
   });
 }
 
-/* ── Collection search ── */
-document.getElementById('collectionSearch').addEventListener('input', function () {
+/* ── Collection search with dropdown suggestions ── */
+const collectionInput   = document.getElementById('collectionSearch');
+const collectionResults = document.getElementById('collectionSearchResults');
+
+collectionInput.addEventListener('input', function () {
   const q = this.value.trim().toLowerCase();
-  if (!q) { renderGrid(perfumes); return; }
-  renderGrid(perfumes.filter(p =>
+
+  if (!q) {
+    collectionResults.classList.remove('open');
+    renderGrid(perfumes);
+    return;
+  }
+
+  const matches = perfumes.filter(p =>
     p.name.toLowerCase().includes(q) ||
     p.family.toLowerCase().includes(q) ||
     [...(p.top||[]), ...(p.middle||[]), ...(p.base||[])].some(n => n.toLowerCase().includes(q))
-  ));
+  );
+
+  /* update the grid below */
+  renderGrid(matches);
+
+  /* show dropdown suggestions */
+  if (matches.length === 0) {
+    collectionResults.innerHTML = '<div class="csr-empty">No fragrances found</div>';
+  } else {
+    collectionResults.innerHTML = matches.map(p => {
+      const i = perfumes.indexOf(p);
+      const priceVals = p.prices ? Object.values(p.prices) : [];
+      const priceStr  = priceVals.length
+        ? `৳${Math.min(...priceVals)} – ৳${Math.max(...priceVals)}`
+        : '';
+      return `
+        <div class="csr-item" data-idx="${i}">
+          <img class="csr-img" src="${p.img}" alt="${p.name}" onerror="this.style.opacity='0'">
+          <div class="csr-info">
+            <p class="csr-name">${p.name}</p>
+            <p class="csr-family">${p.family}</p>
+          </div>
+          ${priceStr ? `<span class="csr-price">${priceStr}</span>` : ''}
+        </div>`;
+    }).join('');
+
+    /* clicking a suggestion navigates to product page */
+    collectionResults.querySelectorAll('.csr-item').forEach(item => {
+      item.addEventListener('click', () => {
+        window.location.href = `product.html?id=${item.dataset.idx}`;
+      });
+    });
+  }
+
+  collectionResults.classList.add('open');
 });
 
-
-function navGoTo(i) {
-  navResults.classList.remove('open');
-  navInput.value = '';
-  window.location.href = `product.html?id=${i}`;
-}
-
+/* close dropdown when clicking outside */
 document.addEventListener('click', e => {
-  if (!document.getElementById('navSearchWrap').contains(e.target))
-    navResults.classList.remove('open');
+  if (!document.querySelector('.collection-search-wrap').contains(e.target)) {
+    collectionResults.classList.remove('open');
+  }
+});
+
+/* close dropdown on Escape */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') collectionResults.classList.remove('open');
 });
 
 /* ── Badge refresh on focus (returning from product page) ── */
