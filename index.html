@@ -7,64 +7,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* ── Cart badge on nav ── */
-    .nav-cart-btn {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.3);
-      color: #fff;
-      font-family: 'Jost', sans-serif;
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 0.45rem 1rem;
-      cursor: pointer;
-      transition: background 0.2s;
-      white-space: nowrap;
-      flex-shrink: 0;
-      text-decoration: none;
-    }
-    .nav-cart-btn:hover { background: rgba(255,255,255,0.25); }
-
-    .cart-badge {
-      background: #C4963A;
-      color: #fff;
-      font-size: 0.65rem;
-      font-weight: 500;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      display: none;
-      align-items: center;
-      justify-content: center;
-    }
-    .cart-badge.visible { display: flex; }
-
-    /* ── Card gap fix ── */
-    .perfume-grid {
-      gap: 18px !important;
-    }
-
-    /* ── Cards open in new tab — keep cursor pointer ── */
-    .perfume-card { cursor: pointer; }
-  </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a class="nav-logo" href="#">Scent Of The Day</a>
   <div class="nav-center">
     <div class="nav-search" id="navSearchWrap">
-      <input type="text" id="navSearchInput" placeholder="Search fragrances…" autocomplete="off" />
+      <input type="text" id="navSearchInput" placeholder="Search fragrances…" autocomplete="off">
       <button aria-label="Search">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"/>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       </button>
     </div>
   </div>
@@ -73,28 +25,22 @@
     <li><a href="#collection">Collection</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <!-- Cart shortcut -->
-  <button class="nav-cart-btn" id="navCartBtn" onclick="openCart()">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+  <button class="nav-cart-btn" onclick="openCart()">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
     Cart
     <span class="cart-badge" id="cartBadge">0</span>
   </button>
 </nav>
 
-<!-- Nav search dropdown -->
 <div class="search-results" id="navSearchResults"></div>
 
-<!-- HERO -->
 <section class="hero">
   <p class="hero-eyebrow">Artisanal Fragrances</p>
   <h1 class="hero-title">Wear the <em>moment.</em></h1>
   <p class="hero-sub">Each fragrance is a chapter — composed to mark a feeling, a place, a memory.</p>
-  <div class="hero-cta">
-    <a href="#collection" class="btn">Explore Collection</a>
-  </div>
+  <div class="hero-cta"><a href="#collection" class="btn">Explore Collection</a></div>
 </section>
 
-<!-- ABOUT -->
 <section class="about" id="about">
   <div class="about-visual">
     <img class="about-img" src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=700&q=80" alt="Perfume bottle" onerror="this.style.display='none'">
@@ -110,61 +56,51 @@
   </div>
 </section>
 
-<!-- COLLECTION -->
 <section class="collection" id="collection">
   <div class="collection-header">
     <p class="section-label">Our Fragrances</p>
-    <h2 class="section-title" style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 300;">The <em>Collection</em></h2>
+    <h2 class="section-title" style="font-size:clamp(2rem,4vw,3rem);font-weight:300;">The <em>Collection</em></h2>
   </div>
   <div class="collection-search-wrap">
     <div class="collection-search">
-      <input type="text" id="collectionSearch" placeholder="Search by name, note, or family…" autocomplete="off" />
+      <input type="text" id="collectionSearch" placeholder="Search by name, note, or family…" autocomplete="off">
       <button aria-label="Search">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"/>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       </button>
     </div>
   </div>
   <div class="perfume-grid" id="perfumeGrid"></div>
 </section>
 
-<!-- FOOTER -->
 <footer id="contact">
   <span class="footer-logo">Scent Of The Day</span>
   <span class="footer-copy">© 2026 · Handcrafted Fragrances</span>
 </footer>
 
-<!-- CART OVERLAY -->
+<!-- CART -->
 <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
-
-<!-- CART DRAWER -->
 <div class="cart-drawer" id="cartDrawer">
   <div class="cart-header">
     <span class="cart-title">Your Cart</span>
     <button class="cart-close-btn" onclick="closeCart()">✕</button>
   </div>
-  <div class="cart-items" id="cartItems">
-    <div class="cart-empty" id="cartEmpty">
-      <div class="cart-empty-icon">∅</div>
-      <p>Your cart is empty</p>
-      <p style="font-size:0.75rem; opacity:0.7;">Browse the collection and add fragrances</p>
-    </div>
-  </div>
+  <div class="cart-items" id="cartItems"></div>
   <div class="cart-footer" id="cartFooter" style="display:none;">
-    <div class="cart-summary" id="cartSummary"></div>
-    <button class="fb-message-btn" onclick="messageOnFacebook()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white">
-        <path d="M12 2C6.477 2 2 6.264 2 11.5c0 2.861 1.323 5.424 3.414 7.167V22l3.116-1.71C9.482 20.425 10.715 20.5 12 20.5c5.523 0 10-4.264 10-9.5S17.523 2 12 2zm1.008 12.787l-2.547-2.717-4.973 2.717 5.472-5.808 2.612 2.717 4.908-2.717-5.472 5.808z"/>
-      </svg>
-      Message on Facebook
-    </button>
-    <p class="cart-note">You'll be taken to Facebook Messenger with your order details pre-filled. No payment required upfront.</p>
+    <div id="cartSummary"></div>
+    <div class="cart-action-btns">
+      <button class="copy-order-btn" onclick="copyOrderInfo()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copy Order Info
+      </button>
+      <button class="fb-message-btn" onclick="messageOnFacebook()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.477 2 2 6.264 2 11.5c0 2.861 1.323 5.424 3.414 7.167V22l3.116-1.71C9.482 20.425 10.715 20.5 12 20.5c5.523 0 10-4.264 10-9.5S17.523 2 12 2zm1.008 12.787l-2.547-2.717-4.973 2.717 5.472-5.808 2.612 2.717 4.908-2.717-5.472 5.808z"/></svg>
+        Message on Facebook
+      </button>
+    </div>
+    <p class="cart-note">Tap "Message on Facebook" to send your order directly to us via Messenger. No payment required upfront.</p>
   </div>
 </div>
 
-<!-- TOAST -->
 <div class="toast" id="toast"></div>
 
 <script src="cart.js"></script>
