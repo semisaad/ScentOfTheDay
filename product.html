@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scent Of The Day — Product</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white: #FFFFFF;
+      --maroon: #6B1E2E;
+      --maroon-light: #8C3346;
+      --maroon-pale: #F5ECEE;
+      --text: #1a1a1a;
+      --muted: #7a6a6d;
+      --border: rgba(107, 30, 46, 0.15);
+      --gold: #C4963A;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--text);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--maroon);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5vw;
+      height: 64px;
+      gap: 1rem;
+    }
+
+    .nav-back {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      background: none;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: #fff; }
+    .nav-back svg { flex-shrink: 0; }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 300;
+      letter-spacing: 0.14em;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .nav-cart-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .nav-cart-btn:hover { background: rgba(255,255,255,0.25); }
+
+    .cart-badge {
+      background: #C4963A;
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 500;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+    .cart-badge.visible { display: flex; }
+
+    /* ===== PRODUCT LAYOUT ===== */
+    .product-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 5vw 5vw 8vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6vw;
+      align-items: start;
+      opacity: 0;
+      animation: fadeIn 0.6s 0.1s forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== IMAGE SIDE ===== */
+    .product-img-wrap {
+      position: sticky;
+      top: 84px;
+    }
+
+    .product-img-main {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      display: block;
+      background: var(--maroon-pale);
+    }
+
+    .product-img-placeholder {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: var(--maroon-pale);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 8rem;
+      font-weight: 300;
+      color: var(--maroon);
+      opacity: 0.2;
+    }
+
+    .product-img-frame {
+      position: relative;
+    }
+    .product-img-frame::after {
+      content: '';
+      position: absolute;
+      inset: 14px;
+      border: 1px solid var(--border);
+      pointer-events: none;
+    }
+
+    .product-number {
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      color: var(--maroon);
+      opacity: 0.5;
+      text-transform: uppercase;
+      margin-top: 1.5rem;
+      display: block;
+    }
+
+    /* ===== DETAIL SIDE ===== */
+    .product-detail { padding-top: 0.5rem; }
+
+    .product-family-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--maroon);
+      border: 1px solid var(--border);
+      padding: 0.2em 0.8em;
+      background: var(--maroon-pale);
+      margin-bottom: 1.25rem;
+    }
+
+    .product-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 5vw, 3.8rem);
+      font-weight: 300;
+      line-height: 1.0;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.35rem;
+    }
+
+    .product-tagline {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--maroon);
+      font-style: italic;
+      margin-bottom: 1.75rem;
+    }
+
+    .product-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--maroon);
+      opacity: 0.35;
+      margin-bottom: 1.75rem;
+    }
+
+    .product-desc {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.95;
+      margin-bottom: 2.25rem;
+    }
+
+    /* ===== NOTES PYRAMID ===== */
+    .notes-section { margin-bottom: 2.25rem; }
+
+    .notes-section-title {
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .notes-pyramid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .notes-row {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .notes-row-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      width: 36px;
+      flex-shrink: 0;
+      opacity: 0.7;
+    }
+
+    .notes-row-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .note-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--maroon);
+      border: 1px solid var(--border);
+      padding: 0.2em 0.75em;
+      background: var(--maroon-pale);
+    }
+
+    .note-tag.top-note { opacity: 0.7; }
+    .note-tag.heart-note { opacity: 0.85; }
+    .note-tag.base-note { opacity: 1; }
+
+    /* ===== ML SELECTOR ===== */
+    .ml-section { margin-bottom: 2rem; }
+
+    .ml-section-title {
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .ml-options {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .ml-option {
+      flex: 1;
+      border: 1px solid var(--border);
+      background: var(--white);
+      cursor: pointer;
+      padding: 1rem 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+      transition: all 0.25s;
+      position: relative;
+    }
+
+    .ml-option:hover {
+      border-color: var(--maroon);
+      background: var(--maroon-pale);
+    }
+
+    .ml-option.selected {
+      border-color: var(--maroon);
+      background: var(--maroon);
+      color: #fff;
+    }
+
+    .ml-size {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    .ml-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.25s;
+    }
+
+    .ml-option.selected .ml-label {
+      color: rgba(255,255,255,0.75);
+    }
+
+    .ml-check {
+      position: absolute;
+      top: 6px; right: 8px;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.9);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .ml-option.selected .ml-check { opacity: 1; }
+
+    /* ===== QTY + ADD TO CART ===== */
+    .atc-row {
+      display: flex;
+      gap: 0.75rem;
+      align-items: stretch;
+    }
+
+    .qty-control {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .qty-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0 1rem;
+      font-size: 1.2rem;
+      color: var(--maroon);
+      height: 100%;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 40px;
+    }
+    .qty-btn:hover { background: var(--maroon-pale); }
+
+    .qty-display {
+      padding: 0.75rem 1rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 300;
+      min-width: 44px;
+      text-align: center;
+      border-left: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+    }
+
+    .add-to-cart-btn {
+      flex: 1;
+      background: var(--maroon);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.9rem 1.5rem;
+      transition: background 0.25s, transform 0.15s;
+      position: relative;
+      overflow: hidden;
+    }
+    .add-to-cart-btn:hover { background: var(--maroon-light); }
+    .add-to-cart-btn:active { transform: scale(0.98); }
+    .add-to-cart-btn:disabled { background: #ccc; cursor: not-allowed; transform: none; }
+
+    .atc-feedback {
+      display: none;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      color: var(--maroon);
+      letter-spacing: 0.06em;
+      margin-top: 0.75rem;
+    }
+    .atc-feedback.visible { display: flex; }
+
+    /* ===== ACCORDION DETAILS ===== */
+    .accordion { border-top: 1px solid var(--border); margin-top: 2.5rem; }
+
+    .accordion-item { border-bottom: 1px solid var(--border); }
+
+    .accordion-trigger {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 1.1rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-align: left;
+    }
+
+    .accordion-icon {
+      font-size: 1.2rem;
+      color: var(--maroon);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+    .accordion-item.open .accordion-icon { transform: rotate(45deg); }
+
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .accordion-item.open .accordion-body { max-height: 300px; }
+
+    .accordion-content {
+      padding: 0 0 1.25rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    /* ===== CART DRAWER ===== */
+    .cart-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(26, 10, 14, 0.5);
+      z-index: 400;
+      display: none;
+      animation: fadeOverlay 0.3s;
+    }
+    .cart-overlay.open { display: block; }
+
+    @keyframes fadeOverlay {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0; right: 0; bottom: 0;
+      width: min(420px, 100vw);
+      background: var(--white);
+      z-index: 500;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .cart-drawer.open { transform: translateX(0); }
+
+    .cart-header {
+      padding: 1.5rem 1.75rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--maroon);
+      color: #fff;
+    }
+
+    .cart-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+    }
+
+    .cart-close-btn {
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.8);
+      cursor: pointer;
+      font-size: 1.1rem;
+      padding: 0.25rem;
+      transition: color 0.2s;
+    }
+    .cart-close-btn:hover { color: #fff; }
+
+    .cart-items {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.25rem 1.75rem;
+    }
+
+    .cart-empty {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      gap: 0.75rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      text-align: center;
+    }
+
+    .cart-empty-icon {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--maroon);
+      opacity: 0.2;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      animation: slideIn 0.3s ease;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(20px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    .cart-item-img {
+      width: 64px;
+      height: 80px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: var(--maroon-pale);
+    }
+
+    .cart-item-info { flex: 1; min-width: 0; }
+
+    .cart-item-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin-bottom: 0.15rem;
+    }
+
+    .cart-item-meta {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+
+    .cart-item-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cart-item-qty-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .cart-qty-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.2rem 0.55rem;
+      font-size: 1rem;
+      color: var(--maroon);
+      transition: background 0.2s;
+    }
+    .cart-qty-btn:hover { background: var(--maroon-pale); }
+
+    .cart-qty-num {
+      padding: 0.2rem 0.5rem;
+      font-size: 0.82rem;
+      border-left: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      min-width: 28px;
+      text-align: center;
+    }
+
+    .cart-item-remove {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    .cart-item-remove:hover { color: var(--maroon); }
+
+    /* ===== CART FOOTER ===== */
+    .cart-footer {
+      padding: 1.5rem 1.75rem;
+      border-top: 1px solid var(--border);
+      background: var(--maroon-pale);
+    }
+
+    .cart-summary {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      margin-bottom: 1.25rem;
+      line-height: 1.7;
+    }
+
+    .cart-summary strong {
+      color: var(--text);
+      font-weight: 400;
+    }
+
+    .fb-message-btn {
+      width: 100%;
+      background: #1877F2;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      transition: background 0.25s, transform 0.15s;
+    }
+    .fb-message-btn:hover { background: #166FE5; }
+    .fb-message-btn:active { transform: scale(0.98); }
+
+    .fb-message-btn svg { flex-shrink: 0; }
+
+    .cart-note {
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top: 0.85rem;
+      line-height: 1.6;
+    }
+
+    /* ===== TOAST ===== */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: var(--maroon);
+      color: #fff;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.75rem 1.75rem;
+      z-index: 600;
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s;
+      white-space: nowrap;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 720px) {
+      .product-wrap {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .product-img-wrap { position: relative; top: 0; }
+      .product-img-main { aspect-ratio: 4/3; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <button class="nav-back" onclick="window.close(); window.history.back();">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    Back
+  </button>
+  <a class="nav-logo" href="#">Scent Of The Day</a>
+  <button class="nav-cart-btn" onclick="openCart()">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    Cart
+    <span class="cart-badge" id="cartBadge">0</span>
+  </button>
+</nav>
+
+<!-- PRODUCT WRAP -->
+<div class="product-wrap" id="productWrap">
+  <!-- IMAGE SIDE -->
+  <div class="product-img-wrap">
+    <div class="product-img-frame">
+      <img class="product-img-main" id="pImg" src="" alt="" onerror="this.style.display='none'; document.getElementById('pImgPlaceholder').style.display='flex'">
+      <div class="product-img-placeholder" id="pImgPlaceholder"></div>
+    </div>
+    <span class="product-number" id="pNum"></span>
+  </div>
+
+  <!-- DETAIL SIDE -->
+  <div class="product-detail">
+    <span class="product-family-badge" id="pFamily"></span>
+    <h1 class="product-name" id="pName"></h1>
+    <p class="product-tagline" id="pTagline"></p>
+    <div class="product-divider"></div>
+    <p class="product-desc" id="pDesc"></p>
+
+    <!-- NOTES PYRAMID -->
+    <div class="notes-section">
+      <p class="notes-section-title">Fragrance Pyramid</p>
+      <div class="notes-pyramid">
+        <div class="notes-row">
+          <span class="notes-row-label">Top</span>
+          <div class="notes-row-tags" id="pTop"></div>
+        </div>
+        <div class="notes-row">
+          <span class="notes-row-label">Heart</span>
+          <div class="notes-row-tags" id="pHeart"></div>
+        </div>
+        <div class="notes-row">
+          <span class="notes-row-label">Base</span>
+          <div class="notes-row-tags" id="pBase"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ML SELECTOR -->
+    <div class="ml-section">
+      <p class="ml-section-title">Select Size</p>
+      <div class="ml-options" id="mlOptions">
+        <button class="ml-option" data-ml="2" onclick="selectML(this)">
+          <span class="ml-check">✓</span>
+          <span class="ml-size">2</span>
+          <span class="ml-label">ml</span>
+        </button>
+        <button class="ml-option" data-ml="3" onclick="selectML(this)">
+          <span class="ml-check">✓</span>
+          <span class="ml-size">3</span>
+          <span class="ml-label">ml</span>
+        </button>
+        <button class="ml-option" data-ml="4" onclick="selectML(this)">
+          <span class="ml-check">✓</span>
+          <span class="ml-size">4</span>
+          <span class="ml-label">ml</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- QTY + ATC -->
+    <div class="atc-row">
+      <div class="qty-control">
+        <button class="qty-btn" onclick="changeQty(-1)">−</button>
+        <span class="qty-display" id="qtyDisplay">1</span>
+        <button class="qty-btn" onclick="changeQty(1)">+</button>
+      </div>
+      <button class="add-to-cart-btn" id="atcBtn" onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="atc-feedback" id="atcFeedback">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      Added to your cart
+    </div>
+
+    <!-- ACCORDION -->
+    <div class="accordion">
+      <div class="accordion-item" id="acc-howto">
+        <button class="accordion-trigger" onclick="toggleAccordion('acc-howto')">
+          How to Wear
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">Apply to pulse points — wrists, neck, and behind the ears. Allow the fragrance to dry naturally without rubbing, which breaks down the molecules. For longevity, moisturise skin before application. Our sample vials are ideal for travel and testing.</div>
+        </div>
+      </div>
+      <div class="accordion-item" id="acc-about">
+        <button class="accordion-trigger" onclick="toggleAccordion('acc-about')">
+          About Our Samples
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">All samples are filled to order in pharmaceutical-grade glass vials with tight-fitting caps. The 2ml sample offers 10–14 wears, the 3ml around 20 wears, and the 4ml up to 28 wears — enough to properly experience a fragrance across different settings and moods.</div>
+        </div>
+      </div>
+      <div class="accordion-item" id="acc-ship">
+        <button class="accordion-trigger" onclick="toggleAccordion('acc-ship')">
+          Shipping & Orders
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">Orders are placed directly via Facebook Messenger. Once we receive your message, we confirm availability and arrange delivery. We ship usually within 2–3 business days. Message us for bundle enquiries and custom orders.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CART OVERLAY -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+
+<!-- CART DRAWER -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <span class="cart-title">Your Cart</span>
+    <button class="cart-close-btn" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty" id="cartEmpty">
+      <div class="cart-empty-icon">∅</div>
+      <p>Your cart is empty</p>
+      <p style="font-size:0.75rem; opacity:0.7;">Select a size and add fragrances</p>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none;">
+    <div class="cart-summary" id="cartSummary"></div>
+    <button class="fb-message-btn" onclick="messageOnFacebook()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white">
+        <path d="M12 2C6.477 2 2 6.264 2 11.5c0 2.861 1.323 5.424 3.414 7.167V22l3.116-1.71C9.482 20.425 10.715 20.5 12 20.5c5.523 0 10-4.264 10-9.5S17.523 2 12 2zm1.008 12.787l-2.547-2.717-4.973 2.717 5.472-5.808 2.612 2.717 4.908-2.717-5.472 5.808z"/>
+      </svg>
+      Message on Facebook
+    </button>
+    <p class="cart-note">You'll be taken to Facebook Messenger with your order details pre-filled. No payment required upfront.</p>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="cart.js"></script>
+<script src="product.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+[
+  {
+    "name": "First Light",
+    "tagline": "Dawn · Dew · Quietude",
+    "family": "Fresh Floral",
+    "img": "https://images.unsplash.com/photo-1541643600914-78b084683702?w=800&q=85",
+    "top": ["Bergamot", "Dew Accord", "White Tea"],
+    "heart": ["Peony", "Lily of the Valley", "Soft Rose"],
+    "base": ["White Musk", "Sandalwood", "Vetiver"],
+    "desc": "First Light opens like a breath of cool morning air — soft citrus lifted on dewy petals. It is a fragrance for quiet mornings, fresh starts, and the gentle clarity that arrives before the world wakes. A transparent floral that feels like light through sheer curtains.\n\nComposed with restraint, First Light never overwhelms. It sits on the skin as a second breath — present but weightless. The bergamot top dissolves quickly into a heart of soft florals, each note chosen for its quietude rather than its loudness. The dry-down is pure white musk and the faintest whisper of sandalwood, lasting well into the afternoon.",
+    "short": "Morning air, dew-kissed petals, transparent clarity."
+  },
+  {
+    "name": "Dark Amber",
+    "tagline": "Depth · Warmth · Mystery",
+    "family": "Oriental Woody",
+    "img": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=85",
+    "top": ["Cardamom", "Black Pepper", "Saffron"],
+    "heart": ["Amber Resin", "Oud", "Labdanum"],
+    "base": ["Dark Musk", "Benzoin", "Cedarwood"],
+    "desc": "Dark Amber is a composition built for depth. Opening with the warm spice of cardamom and the golden richness of saffron, it settles into a molten amber heart laced with rare oud. Long-lasting and hypnotic, it leaves a trail that lingers in the memory long after you have left the room.\n\nThis is not a fragrance for the timid. Dark Amber commands presence — its sillage rich and resinous, its development slow and deliberate. The labdanum heart is dense with history, while the base notes of dark musk and benzoin anchor everything in warmth. Wear it when you want to be remembered.",
+    "short": "Spiced warmth, molten amber, lingering oud."
+  },
+  {
+    "name": "Rose Noir",
+    "tagline": "Elegance · Shadow · Velvet",
+    "family": "Floral Chypre",
+    "img": "https://images.unsplash.com/photo-1584553421349-3557471bed79?w=800&q=85",
+    "top": ["Black Currant", "Blackberry", "Bergamot"],
+    "heart": ["Damask Rose", "Iris", "Geranium"],
+    "base": ["Patchouli", "Oakmoss", "Vetiver"],
+    "desc": "Rose Noir reimagines the rose — not as sweetness but as shadow. The familiar bloom is here edged with dark fruits and grounded in earthy oakmoss and patchouli. It is a rose for those who prefer their beauty with an edge: sophisticated, a little austere, and quietly commanding.\n\nThe chypre structure lends Rose Noir its architectural quality — it is a fragrance that feels constructed rather than merely composed. Bergamot and blackberry at the opening are sharp and immediate; the Damask rose at the heart is classical and cool. The dry-down to patchouli and vetiver is earthy, mossy, and extraordinarily lasting.",
+    "short": "Rose with edges — dark fruits, earthy depth."
+  },
+  {
+    "name": "Salt & Cedar",
+    "tagline": "Sea · Wind · Solitude",
+    "family": "Aromatic Woody",
+    "img": "https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?w=800&q=85",
+    "top": ["Sea Salt", "Marine Accord", "Lemon Zest"],
+    "heart": ["Cedar", "Juniper", "Grey Amber"],
+    "base": ["Driftwood", "Iso E Super", "Musk"],
+    "desc": "Inspired by clifftop walks and cold open water, Salt & Cedar is clean without being sterile, natural without pretence. Sea salt and marine notes give way to the quiet permanence of cedar and driftwood. It is the scent of wide horizons and unhurried solitude.\n\nSalt & Cedar is an outdoor fragrance with an indoor sensibility. The marine opening is bracing and immediate — you feel it before you smell it. As it dries, the cedar and grey amber emerge with a quiet authority. The Iso E Super base creates a woody, skin-close halo that lasts. This is a fragrance for those who crave space.",
+    "short": "Open water, cedar cliffs, clean solitude."
+  },
+  {
+    "name": "Velvet Oud",
+    "tagline": "Luxury · Smoke · Sensuality",
+    "family": "Woody Oriental",
+    "img": "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=800&q=85",
+    "top": ["Rose Absolute", "Nutmeg", "Pink Pepper"],
+    "heart": ["Oud Wood", "Smoked Birch", "Myrrh"],
+    "base": ["Ambergris", "Vanilla Absolute", "Tonka Bean"],
+    "desc": "Velvet Oud is an evening fragrance — unhurried and deeply luxurious. Rose absolute and pink pepper draw you in while the heart reveals a brooding oud, smoked and ancient. The base is skin-close warmth: ambergris, vanilla, tonka. This is a scent that asks nothing, yet draws everything closer.\n\nThe oud at the heart of Velvet Oud is not the sharp, medicinal variety — it is round, aged, and wrapped in smoked birch and myrrh. The result is opulent but never heavy. On skin, it develops beautifully over hours, each stage revealing something new. Wear it from evening onwards, and let it do the talking.",
+    "short": "Smoked oud, rose, warm vanillic base."
+  },
+  {
+    "name": "Fig & Stone",
+    "tagline": "Earth · Green · Mediterranean",
+    "family": "Green Woody",
+    "img": "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=800&q=85",
+    "top": ["Fig Leaf", "Green Accord", "Galbanum"],
+    "heart": ["Fig Milk", "Jasmine", "Rock Rose"],
+    "base": ["Limestone Accord", "Cedarwood", "Orris Root"],
+    "desc": "Fig & Stone captures a specific kind of afternoon: sun-warmed stone, a fig tree heavy with fruit, the faint green sharpness of broken leaves. It is Mediterranean in spirit — earthy, alive, unhurried. Neither floral nor strictly woody, it occupies a rare green space all of its own.\n\nFig is one of the most difficult ingredients to render without tipping into sweetness or artificiality. Here, the fig is kept honest — green and milky in the top and heart, grounded in the mineral quality of a limestone accord at the base. Cedarwood and orris root provide the woody anchor. The result is startlingly natural, like stepping into shade from bright sun.",
+    "short": "Sun-warmed fig, stone, living green."
+  }
+]
