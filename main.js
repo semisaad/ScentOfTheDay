@@ -35,7 +35,6 @@ function renderGrid(list) {
         <div class="card-img-placeholder">${p.name[0]}</div>
       </div>
       <div class="card-body">
-        <p class="perfume-number">No. ${num}</p>
         <h3 class="perfume-name">${p.name}</h3>
         <p class="perfume-family">${p.family}</p>
         ${priceRange ? `<p class="perfume-price-range">${priceRange}</p>` : ''}

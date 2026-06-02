@@ -8,7 +8,7 @@
   --white:       #FFFFFF;
   --maroon:      #6B1E2E;
   --maroon-light:#8C3346;
-  --maroon-pale: #F5ECEE;
+  --maroon-pale: #ffffff;
   --text:        #1a1a1a;
   --muted:       #7a6a6d;
   --border:      rgba(107, 30, 46, 0.15);
@@ -332,11 +332,13 @@ nav {
    PERFUME CARD
    =================================================== */
 .perfume-card {
-  background: var(--white);
+  background: rgb(252, 245, 245);
   cursor: pointer;
   transition: background 0.3s;
   position: relative;
   overflow: hidden;
+  box-shadow: 1px 1px 2px #8888887c;
+  border-radius: 5px;
 }
 .perfume-card::before {
   content: ''; position: absolute; top: 0; left: 0;
@@ -349,9 +351,14 @@ nav {
 .card-img-wrap {
   width: 100%; aspect-ratio: 4/3;
   overflow: hidden; background: var(--maroon-pale); position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;          /* Increase this number if you want the image even smaller */
+  box-sizing: border-box;
 }
 .card-img {
-  width: 100%; height: 100%; object-fit: cover; display: block;
+  width: 100%; height: 100%; object-fit: contain; display: block;
   transition: transform 0.5s ease;
 }
 .perfume-card:hover .card-img { transform: scale(1.04); }
@@ -597,17 +604,23 @@ footer {
 
 /* image column */
 .product-img-wrap { position: sticky; top: 84px; }
-.product-img-frame { position: relative; }
+.product-img-frame { 
+  position: relative; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;                /* Adjust this number higher to make the image even smaller */
+  box-sizing: border-box;
+}
 .product-img-frame::after {
   content: ''; position: absolute; inset: 12px;
   border: 1px solid var(--border); pointer-events: none;
 }
 .product-img-main {
   width: 100%;
-  height: 340px;          /* fixed height — not full-page tall */
-  object-fit: cover;
-  display: none;          /* shown by JS after load */
-  background: var(--maroon-pale);
+  height: 420px;          /* Keeps your original height profile */
+  object-fit: contain;    /* Changed from 'cover' to 'contain' */
+  display: none;          /* Keeps default state for JS to trigger visibility */
 }
 .product-img-placeholder {
   width: 100%; height: 340px;

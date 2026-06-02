@@ -1,74 +1,596 @@
 [
   {
-    "name": "First Light",
-    "family": "Fresh Floral",
-    "img": "https://images.unsplash.com/photo-1541643600914-78b084683702?w=800&q=85",
-    "top": ["Bergamot", "Dew Accord", "White Tea"],
-    "middle": ["Peony", "Lily of the Valley", "Soft Rose"],
-    "base": ["White Musk", "Sandalwood", "Vetiver"],
-    "prices": { "3": 150, "5": 220, "9": 350, "15": 520, "30": 900 }
-  },
-  {
-    "name": "Dark Amber",
-    "family": "Oriental Woody",
-    "img": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=85",
-    "top": ["Cardamom", "Black Pepper", "Saffron"],
-    "middle": ["Amber Resin", "Oud", "Labdanum"],
-    "base": ["Dark Musk", "Benzoin", "Cedarwood"],
-    "prices": { "3": 180, "5": 260, "9": 420, "15": 620, "30": 1100 }
-  },
-  {
-    "name": "Rose Noir",
-    "family": "Floral Chypre",
-    "img": "https://images.unsplash.com/photo-1584553421349-3557471bed79?w=800&q=85",
-    "top": ["Black Currant", "Blackberry", "Bergamot"],
-    "middle": ["Damask Rose", "Iris", "Geranium"],
-    "base": ["Patchouli", "Oakmoss", "Vetiver"],
-    "prices": { "3": 170, "5": 240, "9": 390, "15": 580, "30": 1000 }
-  },
-  {
-    "name": "Salt & Cedar",
-    "family": "Aromatic Woody",
-    "img": "https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?w=800&q=85",
-    "top": ["Sea Salt", "Marine Accord", "Lemon Zest"],
-    "middle": ["Cedar", "Juniper", "Grey Amber"],
-    "base": ["Driftwood", "Iso E Super", "Musk"],
-    "prices": { "3": 150, "5": 220, "9": 350, "15": 520, "30": 900 }
-  },
-  {
-    "name": "Velvet Oud",
-    "family": "Woody Oriental",
-    "img": "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=800&q=85",
-    "top": ["Rose Absolute", "Nutmeg", "Pink Pepper"],
-    "middle": ["Oud Wood", "Smoked Birch", "Myrrh"],
-    "base": ["Ambergris", "Vanilla Absolute", "Tonka Bean"],
-    "prices": { "3": 200, "5": 300, "9": 480, "15": 700, "30": 1250 }
-  },
-  {
-    "name": "Fig & Stone",
-    "family": "Green Woody",
-    "img": "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=800&q=85",
-    "top": ["Fig Leaf", "Green Accord", "Galbanum"],
-    "middle": ["Fig Milk", "Jasmine", "Rock Rose"],
-    "base": ["Limestone Accord", "Cedarwood", "Orris Root"],
-    "prices": { "3": 160, "5": 230, "9": 370, "15": 550, "30": 950 }
-  },
-  {
     "name": "Lattafa Khamrah",
     "family": "Oriental Woody",
-    "img": "assets/khamrah.jpeg",
-    "top": ["Saffron", "Cardamom", "Cinnamon"],
-    "middle": ["Oud", "Rose", "Patchouli"],
-    "base": ["Amber", "Musk", "Vanilla"],
-    "prices": { "3": 180, "5": 260, "9": 420, "15": 620, "30": 1100 }
+    "img": "assets/khamrah.jpg",
+    "top": ["Cinnamon", "Nutmeg", "Bergamot"],
+    "middle": ["Dates", "Praline", "Tuberose", "Mahonial"],
+    "base": ["Vanilla", "Tonka Bean", "Amberwood", "Myrrh", "Benzoin", "Akigalawood"],
+    "prices": { "3": 210, "5": 310, "9": 510, "15": 790, "30": 1430 }
   },
   {
     "name": "Lattafa Khamrah Qahwa",
     "family": "Oriental Gourmand",
-    "img": "assets/qahwa.jpeg",
-    "top": ["Coffee", "Cardamom", "Saffron"],
-    "middle": ["Oud", "Rose", "Amber"],
-    "base": ["Musk", "Vanilla", "Sandalwood"],
-    "prices": { "3": 180, "5": 260, "9": 420, "15": 620, "30": 1100 }
+    "img": "assets/khamrah qahwa.jpg",
+    "top": ["Cinnamon", "Cardamom", "Ginger"],
+    "middle": ["Praline", "Candied Fruits", "White Flowers"],
+    "base": ["Vanilla", "Coffee", "Tonka Bean", "Benzoin", "Musk"],
+    "prices": { "3": 210, "5": 310, "9": 510, "15": 790, "30": 1430 }
+  },
+  {
+    "name": "Lattafa Dynasty",
+    "family": "Woody Spicy",
+    "img": "assets/Dynasty.jpg",
+    "top": ["Bergamot", "Ginger", "Clary Sage", "Raspberry", "Nutmeg"],
+    "middle": ["Rooibos Tea", "Suede"],
+    "base": ["Cedarwood", "Cashmeran", "Amberwood"],
+    "prices": { "3": 200, "5": 300, "9": 490, "15": 770, "30": 1390 }
+  },
+  {
+    "name": "Lattafa Maahir Legacy",
+    "family": "Fresh Spicy",
+    "img": "assets/Maahir Legacy.jpg",
+    "top": ["Lime", "Mint", "Grapefruit", "Lavender", "Pineapple"],
+    "middle": ["Black Pepper", "Rosemary", "Juniper Berry", "Geranium", "Frankincense"],
+    "base": ["Ambroxan", "Vetiver", "Oakmoss", "Tonka Bean", "Cashmeran"],
+    "prices": { "3": 190, "5": 290, "9": 470, "15": 730, "30": 1310 }
+  },
+  {
+    "name": "Lattafa Angham",
+    "family": "Oriental Gourmand",
+    "img": "assets/Angham.jpg",
+    "top": ["Ginger", "Mandarin", "Pink Pepper"],
+    "middle": ["Lavender", "Praline", "Cacao", "Jasmine"],
+    "base": ["Vanilla", "Amber", "Musk"],
+    "prices": { "3": 180, "5": 270, "9": 440, "15": 690, "30": 1270 }
+  },
+  {
+    "name": "Lattafa Yara",
+    "family": "Floral Fruity",
+    "img": "assets/yara.jpg",
+    "top": ["Orchid", "Heliotrope", "Tangerine"],
+    "middle": ["Gourmand Accord", "Tropical Fruits"],
+    "base": ["Vanilla", "Musk", "Sandalwood"],
+    "prices": { "3": 180, "5": 270, "9": 440, "15": 690, "30": 1270 }
+  },
+  {
+    "name": "Lattafa Fakhar Black",
+    "family": "Aromatic Fougere",
+    "img": "assets/Fakhar black.jpg",
+    "top": ["Apple", "Bergamot", "Ginger"],
+    "middle": ["Lavender", "Sage", "Juniper Berries", "Geranium"],
+    "base": ["Tonka Bean", "Cedar", "Amberwood", "Vetiver"],
+    "prices": { "3": 170, "5": 260, "9": 430, "15": 650, "30": 1190 }
+  },
+  {
+    "name": "Lattafa Qaed Al Fursan",
+    "family": "Oriental Woody",
+    "img": "assets/Qaed al fursan.jpg",
+    "top": ["Pineapple", "Saffron"],
+    "middle": ["Balsam Fir", "Jasmine"],
+    "base": ["Cedar", "Amber", "Agarwood (Oud)"],
+    "prices": { "3": 140, "5": 230, "9": 360, "15": 550, "30": 990 }
+  },
+  {
+    "name": "Lattafa Bade'e Al Oud Honor & Glory",
+    "family": "Oriental Gourmand",
+    "img": "assets/Badee al oud.jpg",
+    "top": ["Pineapple", "Creme Brulee"],
+    "middle": ["Cinnamon", "Turmeric", "Black Pepper", "Benzoin"],
+    "base": ["Vanilla", "Sandalwood", "Cashmeran", "Moss"],
+    "prices": { "3": 180, "5": 270, "9": 440, "15": 690, "30": 1270 }
+  },
+  {
+    "name": "Rasasi Hawas For Him",
+    "family": "Fresh Aquatic",
+    "img": "assets/Hawas for him.jpg",
+    "top": ["Apple", "Bergamot", "Lemon", "Cinnamon"],
+    "middle": ["Watery Notes", "Plum", "Orange Blossom", "Cardamon"],
+    "base": ["Ambergris", "Musk", "Patchouli", "Driftwood"],
+    "prices": { "3": 190, "5": 290, "9": 470, "15": 730, "30": 1310 }
+  },
+  {
+    "name": "Rasasi Hawas Ice",
+    "family": "Fresh Spicy",
+    "img": "assets/hawas ice.jpg",
+    "top": ["Apple", "Italian Lemon", "Sicilian Bergamot", "Star Anise"],
+    "middle": ["Plum", "Orange Blossom", "Cardamon"],
+    "base": ["Musk", "Amber", "Driftwood", "Moss"],
+    "prices": { "3": 210, "5": 310, "9": 510, "15": 790, "30": 1430 }
+  },
+  {
+    "name": "Rasasi Hawas Black",
+    "family": "Woody Chypre",
+    "img": "assets/hawas black.jpg",
+    "top": ["Bergamot", "Pineapple", "Grapefruit"],
+    "middle": ["Patchouli", "Cedarwood", "Jasmine"],
+    "base": ["Oakmoss", "Woody Notes", "Amber"],
+    "prices": { "3": 190, "5": 280, "9": 470, "15": 720, "30": 1310 }
+  },
+  {
+    "name": "Rasasi Hawas Fire",
+    "family": "Marine Amber",
+    "img": "assets/Hawas fire.jpg",
+    "top": ["Clary Sage"],
+    "middle": ["Marine Notes", "Egyptian Jasmine"],
+    "base": ["Amber", "Mineral Notes", "Ambergris"],
+    "prices": { "3": 240, "5": 350, "9": 590, "15": 920, "30": 1680 }
+  },
+  {
+    "name": "Rasasi Hawas Thunder",
+    "family": "Spicy Woody",
+    "img": "assets/hawas thunder.jpeg",
+    "top": ["Bergamot", "Ginger", "Apple"],
+    "middle": ["Spicy Notes"],
+    "base": ["Woody Notes", "Amber"],
+    "prices": { "3": 240, "5": 350, "9": 590, "15": 920, "30": 1680 }
+  },
+  {
+    "name": "Rasasi Hawas Atlantis",
+    "family": "Aquatic Fruity",
+    "img": "assets/hawas atlantis.jpg",
+    "top": ["Bergamot", "Lemon", "Apple", "Cinnamon"],
+    "middle": ["Watery Notes", "Plum", "Cardamom", "Orange Blossom"],
+    "base": ["Driftwood", "Ambergris", "Patchouli", "Musk"],
+    "prices": { "3": 240, "5": 350, "9": 590, "15": 920, "30": 1680 }
+  },
+  {
+    "name": "Rasasi Hawas Diva",
+    "family": "Floral Fruity",
+    "img": "assets/hawas diva.jpg",
+    "top": ["Red Fruits", "Rhubarb", "Lychee"],
+    "middle": ["Rose", "Frankincense", "Cedar"],
+    "base": ["Vanilla", "Musk", "Ambergris"],
+    "prices": { "3": 200, "5": 300, "9": 490, "15": 770, "30": 1390 }
+  },
+  {
+    "name": "Rasasi Hawas Malibu",
+    "family": "Fresh Fruity",
+    "img": "assets/hawas malibu.jpg",
+    "top": ["Pineapple", "Orange", "Grapefruit"],
+    "middle": ["Orris", "Amber", "Lavender"],
+    "base": ["Tonka Bean", "Musk", "Cashmeran", "Patchouli"],
+    "prices": { "3": 190, "5": 290, "9": 470, "15": 730, "30": 1310 }
+  },
+  {
+    "name": "Rasasi Hawas Verde",
+    "family": "Citrus Aromatic",
+    "img": "assets/hawas verde.jpg",
+    "top": ["Lime", "Rosemary", "Green Apple"],
+    "middle": [],
+    "base": ["Patchouli", "Amber"],
+    "prices": { "3": 240, "5": 350, "9": 590, "15": 920, "30": 1680 }
+  },
+  {
+    "name": "Rasasi Hawas Kobra",
+    "family": "Citrus Woody",
+    "img": "assets/hawas kobra.jpg",
+    "top": ["Ginger", "Bergamot", "Tangerine"],
+    "middle": ["Green Tea", "Cinnamon", "Neroli"],
+    "base": ["Musk", "Woodsy Notes", "Amber"],
+    "prices": { "3": 190, "5": 290, "9": 470, "15": 730, "30": 1350 }
+  },
+  {
+    "name": "Rasasi Fattan",
+    "family": "Woody Aromatic",
+    "img": "assets/fattan.jpg",
+    "top": ["Grapefruit", "Bergamot", "Pink Pepper"],
+    "middle": ["Vetiver", "Cedar", "Patchouli", "Lily-of-the-Valley"],
+    "base": ["Oakmoss", "Benzoin", "Amber"],
+    "prices": { "3": 230, "5": 350, "9": 570, "15": 900, "30": 1640 }
+  },
+  {
+    "name": "Armaf Club de Nuit Intense Men",
+    "family": "Leathery Fruity",
+    "img": "assets/cdnim edp.jpg",
+    "top": ["Lemon", "Pineapple", "Bergamot", "Black Currant", "Apple"],
+    "middle": ["Birch", "Jasmine", "Rose"],
+    "base": ["Musk", "Ambergris", "Patchouli", "Vanilla"],
+    "prices": { "3": 200, "5": 300, "9": 490, "15": 770, "30": 1390 }
+  },
+  {
+    "name": "Armaf Club de Nuit Iconic",
+    "family": "Aromatic Citrus",
+    "img": "assets/iconic.jpg",
+    "top": ["Grapefruit", "Lemon", "Mint", "Pink Pepper", "Coriander"],
+    "middle": ["Ginger", "Melon", "Jasmine", "Nutmeg"],
+    "base": ["Woody Notes", "Incense", "Sandalwood", "Amber", "Cedar", "Patchouli", "Labdanum"],
+    "prices": { "3": 250, "5": 380, "9": 630, "15": 990, "30": 1820 }
+  },
+  {
+    "name": "Armaf Club de Nuit Sillage",
+    "family": "Floral Woody",
+    "img": "assets/sillage.jpg",
+    "top": ["Bergamot", "Lemon", "Lime", "Black Currant", "Violet Leaf", "Ginger"],
+    "middle": ["Rose", "Iris", "Jasmine"],
+    "base": ["Ambroxan", "Musk", "Sandalwood", "Cedar"],
+    "prices": { "3": 230, "5": 340, "9": 570, "15": 880, "30": 1640 }
+  },
+  {
+    "name": "Armaf Club de Nuit Milestone",
+    "family": "Marine Fruity",
+    "img": "assets/milestone.jpg",
+    "top": ["Sea Notes", "Red Fruits", "Bergamot"],
+    "middle": ["Violet", "White Woods", "Sandalwood"],
+    "base": ["Musk", "Ambroxan", "Vetiver"],
+    "prices": { "3": 230, "5": 340, "9": 570, "15": 880, "30": 1640 }
+  },
+  {
+    "name": "Armaf Club de Nuit Maleka",
+    "family": "Floral Gourmand",
+    "img": "assets/maleka.jpg",
+    "top": ["Lychee", "Bergamot", "Pink Pepper"],
+    "middle": ["Orris"],
+    "base": ["Praline", "Ambroxan", "Sandalwood"],
+    "prices": { "3": 230, "5": 340, "9": 570, "15": 880, "30": 1640 }
+  },
+  {
+    "name": "Armaf Dunescape",
+    "family": "Aromatic Aquatic",
+    "img": "assets/Dunescape.jpg",
+    "top": ["Blood Orange", "Bergamot", "Mandarin", "Lemon", "Ginger", "Sage", "Juniper"],
+    "middle": ["Ozonic Notes", "Apple", "Geranium", "Cashmeran", "Rose"],
+    "base": ["Amber", "Musk", "Sandalwood"],
+    "prices": { "3": 240, "5": 350, "9": 590, "15": 920, "30": 1680 }
+  },
+  {
+    "name": "Afnan Turathi Blue",
+    "family": "Citrus Woody",
+    "img": "assets/turathi blue.jpg",
+    "top": ["Citruses"],
+    "middle": ["Amber", "Woodsy Notes"],
+    "base": ["Musk", "Spices", "Patchouli"],
+    "prices": { "3": 230, "5": 340, "9": 570, "15": 880, "30": 1640 }
+  },
+  {
+    "name": "Afnan Turathi Electric",
+    "family": "Citrus Fruity",
+    "img": "assets/turathi electric.jpg",
+    "top": ["Pear", "Pink Grapefruit", "Mandarin Orange", "Bergamot"],
+    "middle": ["Orange Blossom", "Apple", "Cedarwood"],
+    "base": ["Musk", "Amber", "Vanilla"],
+    "prices": { "3": 240, "5": 350, "9": 590, "15": 920, "30": 1680 }
+  },
+  {
+    "name": "Afnan Supremacy Collector's Edition",
+    "family": "Fruity Chypre",
+    "img": "assets/Supremacy ce.jpg",
+    "top": ["Pineapple", "Bergamot", "White Flowers", "Apple"],
+    "middle": ["Orange Blossom", "Birch", "Amber"],
+    "base": ["Oak Moss", "Musk", "Ambergris"],
+    "prices": { "3": 350, "5": 520, "9": 880, "15": 1390, "30": 2550 }
+  },
+  {
+    "name": "Afnan Lynked Freedom",
+    "family": "Aromatic Spicy",
+    "img": "assets/Lynked Freedom.jpg",
+    "top": ["Bergamot", "Grapefruit", "Sage"],
+    "middle": ["Lavender", "Cardamom", "Juniper Berry"],
+    "base": ["Caramel", "Oriental Notes", "Vetiver"],
+    "prices": { "3": 280, "5": 420, "9": 710, "15": 1120, "30": 2080 }
+  },
+  {
+    "name": "Afnan 9pm",
+    "family": "Oriental Fougere",
+    "img": "assets/9pm.jpg",
+    "top": ["Apple", "Cinnamon", "Wild Lavender", "Bergamot"],
+    "middle": ["Orange Blossom", "Lily-of-the-Valley"],
+    "base": ["Vanilla", "Tonka Bean", "Amber", "Patchouli"],
+    "prices": { "3": 230, "5": 340, "9": 560, "15": 840, "30": 1540 }
+  },
+  {
+    "name": "Afnan 9pm Rebel",
+    "family": "Fruity Woody",
+    "img": "assets/9pm rebel.jpg",
+    "top": ["Pineapple", "Granny Smith Apple", "Mandarin"],
+    "middle": ["Oakmoss", "Cedarwood", "Vanilla"],
+    "base": ["Dry Wood", "Ambergris", "Caramel", "Musk"],
+    "prices": { "3": 270, "5": 400, "9": 670, "15": 1060, "30": 1950 }
+  },
+  {
+    "name": "Afnan Rare Reef",
+    "family": "Aromatic Fruity",
+    "img": "assets/rare reef.jpg",
+    "top": ["Orange", "Citron", "Mint", "Grapefruit", "Blackcurrant", "Coriander"],
+    "middle": ["Apricot", "Violet Leaf", "Basil", "Rose"],
+    "base": ["Fig", "Ambrette", "Amberwood", "Dates"],
+    "prices": { "3": 250, "5": 370, "9": 630, "15": 960, "30": 1780 }
+  },
+  {
+    "name": "French Avenue Aether Extrait",
+    "family": "Woody Citrus",
+    "img": "assets/aether.jpg",
+    "top": ["Green Apple", "Bergamot", "Mandarin Orange"],
+    "middle": ["Cedar", "Petitgrain", "Cashmeran", "Violet"],
+    "base": ["Musk", "Oakmoss", "Amberwood"],
+    "prices": { "3": 240, "5": 350, "9": 590, "15": 920, "30": 1680 }
+  },
+  {
+    "name": "French Avenue Atlantis Extrait",
+    "family": "Fresh Aquatic",
+    "img": "assets/Atlantis.jpg",
+    "top": ["Orange", "Mandarin Orange", "Lemon"],
+    "middle": ["Watermelon", "Coconut"],
+    "base": ["Ambergris", "Cacao", "Amberwood"],
+    "prices": { "3": 240, "5": 350, "9": 590, "15": 920, "30": 1680 }
+  },
+  {
+    "name": "French Avenue Nomad",
+    "family": "Oriental Spicy",
+    "img": "assets/nomad.jpg",
+    "top": ["Saffron", "Lemon"],
+    "middle": ["Marine Notes", "White Flowers"],
+    "base": ["Vanilla", "Amber", "Cypriol", "Patchouli"],
+    "prices": { "3": 240, "5": 350, "9": 590, "15": 920, "30": 1680 }
+  },
+  {
+    "name": "French Avenue Ripple",
+    "family": "Marine Woody",
+    "img": "assets/ripple.jpg",
+    "top": ["Lavender", "Bergamot", "Sage"],
+    "middle": ["Marine Notes", "Sea Water", "Sandalwood", "Cedarwood"],
+    "base": ["Incense", "Amber", "Musk"],
+    "prices": { "3": 240, "5": 350, "9": 590, "15": 920, "30": 1680 }
+  },
+  {
+    "name": "French Avenue Jasmere",
+    "family": "Floral Woody",
+    "img": "assets/jasmere.jpeg",
+    "top": ["Linden Blossom", "Jasmine Sambac", "Broom"],
+    "middle": ["Vetiver", "Orange Blossom", "Heliotrope"],
+    "base": ["Musk", "Dry Wood"],
+    "prices": { "3": 240, "5": 350, "9": 590, "15": 920, "30": 1680 }
+  },
+  {
+    "name": "French Avenue Liquid Brun",
+    "family": "Oriental Gourmand",
+    "img": "assets/liquid brun.jpg",
+    "top": ["Cinnamon", "Orange Blossom", "Cardamom", "Bergamot"],
+    "middle": ["Bourbon Vanilla", "Elemi"],
+    "base": ["Praline", "Ambroxan", "Musk", "Guaiac Wood"],
+    "prices": { "3": 240, "5": 350, "9": 590, "15": 920, "30": 1680 }
+  },
+  {
+    "name": "French Avenue Safari Breeze",
+    "family": "Fresh Fruity",
+    "img": "assets/safari breeze.jpg",
+    "top": ["Grapefruit", "Blackcurrant", "Coconut"],
+    "middle": ["Spearmint", "Jasmine"],
+    "base": ["Vetiver", "Oakmoss", "Amber"],
+    "prices": { "3": 260, "5": 390, "9": 650, "15": 1020, "30": 1880 }
+  },
+  {
+    "name": "Aromatix X French Avenue Platine Blanc",
+    "family": "Aromatic Fougere",
+    "img": "assets/Platine Blanc.jpg",
+    "top": ["Mint", "Lime", "Tonic Water", "Lemon"],
+    "middle": ["Rosemary", "Black Currant", "Jasmine"],
+    "base": ["Musk", "Ambergris", "Sandalwood", "Oakmoss"],
+    "prices": { "3": 270, "5": 400, "9": 670, "15": 1060, "30": 1950 }
+  },
+  {
+    "name": "Aromatix X French Avenue Magnetiq",
+    "family": "Oriental Woody",
+    "img": "assets/Magnetiq.jpg",
+    "top": ["Lavender", "Bergamot", "Pink Pepper"],
+    "middle": ["Orange Blossom", "Iris", "Musk", "Neroli", "Rosemary"],
+    "base": ["Cedarwood", "Amber", "Sandalwood", "Vanilla", "Oakmoss", "Myrrh"],
+    "prices": { "3": 270, "5": 400, "9": 670, "15": 1060, "30": 1950 }
+  },
+  {
+    "name": "Khadlaj Island",
+    "family": "Tropical Fruity",
+    "img": "assets/khadlaj island.jpg",
+    "top": ["Pineapple", "Iris", "Ginger", "Cypress"],
+    "middle": ["Coconut", "Woodsy Notes"],
+    "base": ["Tonka", "Sandalwood", "Amber", "Ambergris"],
+    "prices": { "3": 190, "5": 290, "9": 470, "15": 730, "30": 1350 }
+  },
+  {
+    "name": "Khadlaj Shiyaaka Snow",
+    "family": "Spicy Woody",
+    "img": "assets/shiyaaka snow.jpg",
+    "top": ["Bergamot", "Mandarin"],
+    "middle": ["Pink Pepper", "Nutmeg", "Neroli"],
+    "base": ["Cardamom", "Vetiver"],
+    "prices": { "3": 190, "5": 290, "9": 470, "15": 730, "30": 1350 }
+  },
+  {
+    "name": "Khadlaj Karus Blue Spice",
+    "family": "Spicy Aromatic",
+    "img": "assets/karus blue spice.jpg",
+    "top": ["Tea", "Bergamot"],
+    "middle": ["Ginger", "Neroli"],
+    "base": ["Cinnamon"],
+    "prices": { "3": 190, "5": 290, "9": 470, "15": 730, "30": 1350 }
+  },
+  {
+    "name": "Davidoff Cool Water EDT",
+    "family": "Fresh Aquatic",
+    "img": "assets/cool water edt.jpg",
+    "top": ["Sea Water", "Lavender", "Mint", "Green Notes", "Rosemary", "Calone", "Coriander"],
+    "middle": ["Sandalwood", "Neroli", "Geranium", "Jasmine"],
+    "base": ["Musk", "Oakmoss", "Cedar", "Tobacco", "Ambergris"],
+    "prices": { "3": 150, "5": 250, "9": 350, "15": 560, "30": 990 }
+  },
+  {
+    "name": "Al Haramain Amber Oud Aqua Dubai",
+    "family": "Oriental Aquatic",
+    "img": "assets/aqua dubai.jpg",
+    "top": ["Bergamot", "Green Notes", "Mandarin Orange"],
+    "middle": ["Melon", "Amber", "Black Currant", "Pineapple"],
+    "base": ["Musk", "Petitgrain", "Galbanum", "Vanilla"],
+    "prices": { "3": 360, "5": 540, "9": 890, "15": 1410, "30": 2610 }
+  },
+  {
+    "name": "Al Haramain Amber Oud Gold Edition",
+    "family": "Oriental Gourmand",
+    "img": "assets/gold edition.jpg",
+    "top": ["Bergamot", "Green Notes"],
+    "middle": ["Melon", "Pineapple", "Amber", "Gourmand Accord"],
+    "base": ["Vanilla", "Musk", "Woody Notes"],
+    "prices": { "3": 260, "5": 390, "9": 650, "15": 1020, "30": 1880 }
+  },
+  {
+    "name": "Carolina Herrera 212 Men",
+    "family": "Aromatic Fougere",
+    "img": "assets/212 men.jpg",
+    "top": ["Green Notes", "Grapefruit", "Spices", "Bergamot", "Lavender", "Petitgrain"],
+    "middle": ["Ginger", "Violet", "Gardenia", "Sage"],
+    "base": ["Musk", "Sandalwood", "Incense", "Vetiver", "Guaiac Wood", "Labdanum"],
+    "prices": { "3": 290, "5": 440, "9": 740, "15": 1120, "30": 2150 }
+  },
+  {
+    "name": "Ahmed Al Maghribi Azure Royal",
+    "family": "Fruity Floral",
+    "img": "assets/azure royal.jpg",
+    "top": ["Pear", "Sweet Notes", "Orange"],
+    "middle": ["Freesia", "Rose"],
+    "base": ["Musk", "Cedarwood"],
+    "prices": { "3": 190, "5": 290, "9": 470, "15": 740, "30": 1350 }
+  },
+  {
+    "name": "Ahmed Al Maghribi Kaaf",
+    "family": "Fresh Floral",
+    "img": "assets/kaaf.jpg",
+    "top": ["Lavender", "Watermelon", "Sicilian Orange", "Red Fruits"],
+    "middle": ["Lily of the Valley", "Jasmine", "Lotus"],
+    "base": ["White Musk", "Sandalwood", "Ambroxan"],
+    "prices": { "3": 220, "5": 320, "9": 530, "15": 820, "30": 1480 }
+  },
+  {
+    "name": "Arabiyat Prestige Oud Al Layl Midnight Edition",
+    "family": "Oriental Woody",
+    "img": "assets/arabiyat midnight.jpg",
+    "top": ["Apple", "Bergamot", "Lemon", "Cinnamon"],
+    "middle": ["Watery Notes", "Plum", "Orange Blossom", "Cardamon"],
+    "base": ["Ambergris", "Musk", "Patchouli", "Driftwood"],
+    "prices": { "3": 120, "5": 160, "9": 260, "15": 390, "30": 710 }
+  },
+  {
+    "name": "Rayhaan Aquatica",
+    "family": "Fresh Aquatic",
+    "img": "assets/rayhaan acquatica.jpg",
+    "top": ["Lime", "Coconut Milk", "Bergamot", "Mandarin"],
+    "middle": ["Sugar Cane", "Jasmine", "Hibiscus", "Gardenia"],
+    "base": ["Rum", "Musk", "Tonka Bean", "Patchouli"],
+    "prices": { "3": 170, "5": 260, "9": 430, "15": 650, "30": 1190 }
+  },
+  {
+    "name": "Rayhaan Tropical Vibe",
+    "family": "Tropical Fruity",
+    "img": "assets/Tropical vibe.jpg",
+    "top": ["Mango", "Pineapple", "Bergamot"],
+    "middle": ["Coconut"],
+    "base": ["Musk", "Amber", "Sandalwood", "Vetiver"],
+    "prices": { "3": 170, "5": 260, "9": 430, "15": 650, "30": 1190 }
+  },
+  {
+    "name": "Rayhaan Nocturno Elixir",
+    "family": "Aromatic Woody",
+    "img": "assets/nocturno_elixir.jpg",
+    "top": ["Lemon Zest", "Artemisia", "Bergamot", "Mint"],
+    "middle": ["Geranium", "Lavender", "Pineapple"],
+    "base": ["Sandalwood"],
+    "prices": { "3": 170, "5": 260, "9": 430, "15": 650, "30": 1190 }
+  },
+  {
+    "name": "Rayhaan Italia",
+    "family": "Aromatic Fougere",
+    "img": "assets/italia.jpg",
+    "top": ["Lavender", "Lemon", "Bergamot"],
+    "middle": ["Honey", "Cinnamon", "Cashmeran", "Jasmine"],
+    "base": ["Vanilla", "Tobacco Leaf", "Tonka Bean"],
+    "prices": { "3": 170, "5": 260, "9": 430, "15": 650, "30": 1190 }
+  },
+  {
+    "name": "Rayhaan Lion",
+    "family": "Spicy Woody",
+    "img": "assets/rayhaan lion.jpg",
+    "top": ["Lavender", "Pear", "Mint", "Bergamot"],
+    "middle": ["Cinnamon", "Clary Sage", "Cumin"],
+    "base": ["Vanilla", "Amber", "Cedar", "Patchouli"],
+    "prices": { "3": 170, "5": 260, "9": 430, "15": 650, "30": 1190 }
+  },
+  {
+    "name": "Rayhaan Tiger",
+    "family": "Spicy Woody",
+    "img": "assets/tiger.jpg",
+    "top": ["Nutmeg", "Clove", "Lemon"],
+    "middle": ["Milk", "Rose", "Davana"],
+    "base": ["Amber", "Patchouli", "Frankincense", "Labdanum"],
+    "prices": { "3": 170, "5": 260, "9": 430, "15": 650, "30": 1190 }
+  },
+  {
+    "name": "Rayhaan Wolf",
+    "family": "Gourmand Woody",
+    "img": "assets/wolf.jpg",
+    "top": ["Cardamom"],
+    "middle": ["Toffee"],
+    "base": ["Amberwood"],
+    "prices": { "3": 170, "5": 260, "9": 430, "15": 650, "30": 1190 }
+  },
+  {
+    "name": "Rayhaan Ocean Rush",
+    "family": "Fresh Aquatic",
+    "img": "assets/ocean rush.jpg",
+    "top": ["Cascalone", "Aquozone", "Bergamot", "Mandarin"],
+    "middle": ["Lavender", "Cypress", "Rosemary"],
+    "base": ["Amber", "Musk", "Patchouli"],
+    "prices": { "3": 140, "5": 210, "9": 340, "15": 500, "30": 910 }
+  },
+  {
+    "name": "Nautica Voyage",
+    "family": "Fresh Aquatic",
+    "img": "assets/nautica voyage.jpg",
+    "top": ["Green Leaves", "Apple"],
+    "middle": ["Lotus", "Mimosa"],
+    "base": ["Musk", "Cedar", "Oakmoss", "Amber"],
+    "prices": { "3": 160, "5": 240, "9": 370, "15": 560, "30": 990 }
+  },
+  {
+    "name": "Rave Now For Men",
+    "family": "Fruity Chypre",
+    "img": "assets/rave now.jpg",
+    "top": ["Pineapple", "Bergamot", "Apple", "Black Currant"],
+    "middle": ["Birch", "Patchouli", "Moroccan Jasmine", "Rose"],
+    "base": ["Musk", "Vanilla", "Oakmoss", "Ambergris"],
+    "prices": { "3": 160, "5": 240, "9": 370, "15": 560, "30": 990 }
+  },
+  {
+    "name": "Rave Now Women",
+    "family": "Fruity Floral",
+    "img": "assets/rave now women.jpg",
+    "top": ["Red Fruits", "Orange"],
+    "middle": ["Marshmallow", "Jasmine", "Lily of the Valley"],
+    "base": ["Vanilla", "Musk", "Moss"],
+    "prices": { "3": 160, "5": 240, "9": 370, "15": 560, "30": 990 }
+  },
+  {
+    "name": "Zimaya Fatima Pink",
+    "family": "Floral Fruity",
+    "img": "assets/Fatima pink.jpg",
+    "top": ["Rhubarb", "Bergamot", "Grapefruit", "Nutmeg"],
+    "middle": ["Rose", "Jasmine"],
+    "base": ["Musk", "Vanilla", "Vetiver", "Ambergris"],
+    "prices": { "3": 180, "5": 270, "9": 440, "15": 690, "30": 1270 }
+  },
+  {
+    "name": "Riiffs Freeze",
+    "family": "Fresh Spicy",
+    "img": "assets/freeze.jpg",
+    "top": ["Lemon Zest", "Spearmint", "Calabrian Bergamot", "Grapefruit", "Snow"],
+    "middle": ["Ice", "Ginger", "Tea", "Sage"],
+    "base": ["Ambermax™", "Peony", "Cedar"],
+    "prices": { "3": 240, "5": 360, "9": 610, "15": 950, "30": 1740 }
+  },
+  {
+    "name": "Antonio Banderas Blue Seduction",
+    "family": "Fresh Aquatic",
+    "img": "assets/blue_seduction.jpg",
+    "top": ["Melon", "Bergamot", "Mint", "Black Currant"],
+    "middle": ["Sea Water", "Green Apple", "Cappuccino", "Cardamom", "Nutmeg"],
+    "base": ["Woodsy Notes", "Amber"],
+    "prices": { "3": 130, "5": 200, "9": 300, "15": 450, "30": 850 }
   }
 ]
