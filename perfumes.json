@@ -488,7 +488,7 @@
   {
     "name": "Rayhaan Nocturno Elixir",
     "family": "Aromatic Woody",
-    "img": "assets/nocturno_elixir.jpg",
+    "img": "assets/rayhaan nocturno elix.jpeg",
     "top": ["Lemon Zest", "Artemisia", "Bergamot", "Mint"],
     "middle": ["Geranium", "Lavender", "Pineapple"],
     "base": ["Sandalwood"],
@@ -497,7 +497,7 @@
   {
     "name": "Rayhaan Italia",
     "family": "Aromatic Fougere",
-    "img": "assets/italia.jpg",
+    "img": "assets/rayhaan italina.jpeg",
     "top": ["Lavender", "Lemon", "Bergamot"],
     "middle": ["Honey", "Cinnamon", "Cashmeran", "Jasmine"],
     "base": ["Vanilla", "Tobacco Leaf", "Tonka Bean"],
@@ -587,7 +587,7 @@
   {
     "name": "Antonio Banderas Blue Seduction",
     "family": "Fresh Aquatic",
-    "img": "assets/blue_seduction.jpg",
+    "img": "assets/banderas blue seduction.jpeg",
     "top": ["Melon", "Bergamot", "Mint", "Black Currant"],
     "middle": ["Sea Water", "Green Apple", "Cappuccino", "Cardamom", "Nutmeg"],
     "base": ["Woodsy Notes", "Amber"],
