@@ -22,9 +22,6 @@ function initProduct() {
 
   document.title = p.name + ' — Scent Of The Day';
 
-  /* number */
-  document.getElementById('pNum').textContent = 'No. ' + String(perfumeIdx + 1).padStart(2, '0');
-
   /* family badge */
   document.getElementById('pFamily').textContent = p.family;
 
@@ -62,6 +59,21 @@ function initProduct() {
   /* auto-open cart if arriving via ?opencart=1 */
   if (params.get('opencart') === '1') {
     setTimeout(SOTDCart.open, 300);
+  }
+
+  /* ── Fast Back Navigation ── */
+  const backBtn = document.querySelector('.nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      // If the user came from our home page, pull it instantly from cache
+      if (document.referrer && document.referrer.includes(window.location.hostname)) {
+        window.history.back();
+      } else {
+        // Fallback if they landed directly on the product link
+        window.location.href = 'index.html';
+      }
+    });
   }
 }
 

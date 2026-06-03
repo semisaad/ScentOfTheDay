@@ -5,8 +5,10 @@
 (function () {
   'use strict';
 
-  /* ── CONFIG ── replace with your Facebook Page username ── */
+  /* ── CONFIG ── replace with your details ── */
   const FB_PAGE = '61589175521836';
+  const WHATSAPP_NUMBER = '8801707047472'; // ← Your WhatsApp number, e.g. 8801712345678
+
   const STORAGE_KEY = 'sotd_cart';
 
   /* ── DELIVERY OPTIONS ── */
@@ -231,6 +233,15 @@
     if (overlay) overlay.classList.add('open');
     if (drawer)  drawer.classList.add('open');
     document.body.style.overflow = 'hidden';
+
+    setTimeout(() => {
+      if (drawer) {
+        drawer.scrollTo({
+          top: drawer.scrollHeight,
+          behavior: 'smooth'
+        });
+      }
+    }, 80);
   }
 
   function closeCart() {
@@ -304,6 +315,21 @@
   }
 
   /* ================================================================
+     WHATSAPP MESSAGE  ← NEW
+  ================================================================ */
+  function messageOnWhatsApp() {
+    const cart = loadCart();
+    if (cart.length === 0)    { showToast('Your cart is empty'); return; }
+    if (!selectedDelivery)    { showToast('Please select a delivery option first'); return; }
+
+    const text = buildOrderText();
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`,
+      '_blank'
+    );
+  }
+
+  /* ================================================================
      TOAST
   ================================================================ */
   let _toastTimer = null;
@@ -336,7 +362,9 @@
     add: addToCart, update: updateCartQty, remove: removeCartItem,
     render: renderCartItems, badge: updateCartBadge,
     open: openCart, close: closeCart,
-    fb: messageOnFacebook, copy: copyOrderInfo,
+    fb: messageOnFacebook,
+    wa: messageOnWhatsApp,   // ← new
+    copy: copyOrderInfo,
     toast: showToast,
   };
 
@@ -344,6 +372,7 @@
   window.openCart          = openCart;
   window.closeCart         = closeCart;
   window.messageOnFacebook = messageOnFacebook;
+  window.messageOnWhatsApp = messageOnWhatsApp;   // ← new
   window.copyOrderInfo     = copyOrderInfo;
   window.showToast         = showToast;
 })();

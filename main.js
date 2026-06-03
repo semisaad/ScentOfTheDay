@@ -6,7 +6,14 @@ let perfumes = [];
 
 fetch('perfumes.json')
   .then(r => r.json())
-  .then(data => { perfumes = data; renderGrid(perfumes); })
+  .then(data => { 
+    // 1. Map the original unshuffled index to each item before sorting
+    perfumes = data.map((p, index) => ({ ...p, originalIndex: index }));
+    
+    // 2. Safely shuffle on every fresh page load/refresh
+    perfumes.sort(() => Math.random() - 0.5); 
+    renderGrid(perfumes); 
+  })
   .catch(err => console.error('Failed to load perfumes:', err));
 
 /* ── Render grid ── */
@@ -19,7 +26,8 @@ function renderGrid(list) {
     return;
   }
   list.forEach(p => {
-    const i   = perfumes.indexOf(p);
+    // CHANGE: Use the immutable original index for the URL parameters
+    const i = p.originalIndex; 
     const num = String(i + 1).padStart(2, '0');
 
     const priceVals  = p.prices ? Object.values(p.prices) : [];
@@ -41,6 +49,7 @@ function renderGrid(list) {
         <div class="card-cta-hint">View &amp; Order →</div>
       </div>
     `;
+    // CHANGE: Passes the true index so product_2.js reads it accurately
     card.addEventListener('click', () => { window.location.href = `product.html?id=${i}`; });
     grid.appendChild(card);
   });
@@ -65,15 +74,14 @@ collectionInput.addEventListener('input', function () {
     [...(p.top||[]), ...(p.middle||[]), ...(p.base||[])].some(n => n.toLowerCase().includes(q))
   );
 
-  /* update the grid below */
   renderGrid(matches);
 
-  /* show dropdown suggestions */
   if (matches.length === 0) {
     collectionResults.innerHTML = '<div class="csr-empty">No fragrances found</div>';
   } else {
     collectionResults.innerHTML = matches.map(p => {
-      const i = perfumes.indexOf(p);
+      // CHANGE: Use originalIndex here as well
+      const i = p.originalIndex;
       const priceVals = p.prices ? Object.values(p.prices) : [];
       const priceStr  = priceVals.length
         ? `৳${Math.min(...priceVals)} – ৳${Math.max(...priceVals)}`
@@ -89,7 +97,6 @@ collectionInput.addEventListener('input', function () {
         </div>`;
     }).join('');
 
-    /* clicking a suggestion navigates to product page */
     collectionResults.querySelectorAll('.csr-item').forEach(item => {
       item.addEventListener('click', () => {
         window.location.href = `product.html?id=${item.dataset.idx}`;
