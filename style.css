@@ -782,3 +782,16 @@ footer {
 @media (max-width: 400px) {
   .perfume-grid { grid-template-columns: 1fr; }
 }
+
+/* ── Hide the background fallback letters completely ── */
+.card-img-placeholder,
+.product-img-placeholder {
+  display: none !important;
+  font-size: 0 !important;
+  color: transparent !important;
+}
+
+/* Ensure the main product image displays cleanly on its background */
+.product-img-main {
+  display: block !important; /* Forces the template image container to stay visible */
+}
