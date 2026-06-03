@@ -779,8 +779,25 @@ footer {
   footer { padding: 2.5rem 4vw; }
 }
 
-@media (max-width: 400px) {
-  .perfume-grid { grid-template-columns: 1fr; }
+/* ── Force 2 Columns on Mobile Screens ── */
+@media (max-width: 600px) {
+  .perfume-grid {
+    grid-template-columns: repeat(2, 1fr) !important; /* Forces exactly two columns side-by-side */
+    gap: 12px; /* Slightly tighter spacing so cards have more room on small screens */
+    padding: 0 10px; /* Snugs the grid closer to the screen edges */
+  }
+
+  .card-img-wrap {
+    padding: 0.8rem; /* Shrinks internal image padding slightly so the perfume bottle remains a good size */
+  }
+
+  .card-body {
+    padding: 1rem 0.75rem; /* Adjusts text padding inside the card for better spacing */
+  }
+  
+  .perfume-name {
+    font-size: 0.95rem; /* Slightly scales down the font size so long names don't wrap aggressively */
+  }
 }
 
 /* ── Hide the background fallback letters completely ── */
