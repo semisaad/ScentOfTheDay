@@ -1,7 +1,7 @@
 [
   {
     "name": "Lattafa Khamrah",
-    "family": "Oriental Woody",
+    "family": "For Men & Women",
     "img": "assets/khamrah.jpg",
     "top": ["Cinnamon", "Nutmeg", "Bergamot"],
     "middle": ["Dates", "Praline", "Tuberose", "Mahonial"],
@@ -10,7 +10,7 @@
   },
   {
     "name": "Lattafa Khamrah Qahwa",
-    "family": "Oriental Gourmand",
+    "family": "For Men & Women",
     "img": "assets/khamrah qahwa.jpg",
     "top": ["Cinnamon", "Cardamom", "Ginger"],
     "middle": ["Praline", "Candied Fruits", "White Flowers"],
@@ -19,7 +19,7 @@
   },
   {
     "name": "Lattafa Dynasty",
-    "family": "Woody Spicy",
+    "family": "For Men & Women",
     "img": "assets/Dynasty.jpg",
     "top": ["Bergamot", "Ginger", "Clary Sage", "Raspberry", "Nutmeg"],
     "middle": ["Rooibos Tea", "Suede"],
@@ -28,7 +28,7 @@
   },
   {
     "name": "Lattafa Maahir Legacy",
-    "family": "Fresh Spicy",
+    "family": "For Men",
     "img": "assets/Maahir Legacy.jpg",
     "top": ["Lime", "Mint", "Grapefruit", "Lavender", "Pineapple"],
     "middle": ["Black Pepper", "Rosemary", "Juniper Berry", "Geranium", "Frankincense"],
@@ -37,7 +37,7 @@
   },
   {
     "name": "Lattafa Angham",
-    "family": "Oriental Gourmand",
+    "family": "For Men & Women",
     "img": "assets/Angham.jpg",
     "top": ["Ginger", "Mandarin", "Pink Pepper"],
     "middle": ["Lavender", "Praline", "Cacao", "Jasmine"],
@@ -46,7 +46,7 @@
   },
   {
     "name": "Lattafa Yara",
-    "family": "Floral Fruity",
+    "family": "For Women",
     "img": "assets/yara.jpg",
     "top": ["Orchid", "Heliotrope", "Tangerine"],
     "middle": ["Gourmand Accord", "Tropical Fruits"],
@@ -55,7 +55,7 @@
   },
   {
     "name": "Lattafa Fakhar Black",
-    "family": "Aromatic Fougere",
+    "family": "For Men",
     "img": "assets/Fakhar black.jpg",
     "top": ["Apple", "Bergamot", "Ginger"],
     "middle": ["Lavender", "Sage", "Juniper Berries", "Geranium"],
@@ -64,7 +64,7 @@
   },
   {
     "name": "Lattafa Qaed Al Fursan",
-    "family": "Oriental Woody",
+    "family": "For Men & Women",
     "img": "assets/Qaed al fursan.jpg",
     "top": ["Pineapple", "Saffron"],
     "middle": ["Balsam Fir", "Jasmine"],
@@ -73,7 +73,7 @@
   },
   {
     "name": "Lattafa Bade'e Al Oud Honor & Glory",
-    "family": "Oriental Gourmand",
+    "family": "For Men & Women",
     "img": "assets/Badee al oud.jpg",
     "top": ["Pineapple", "Creme Brulee"],
     "middle": ["Cinnamon", "Turmeric", "Black Pepper", "Benzoin"],
@@ -82,7 +82,7 @@
   },
   {
     "name": "Rasasi Hawas For Him",
-    "family": "Fresh Aquatic",
+    "family": "For Men",
     "img": "assets/Hawas for him.jpg",
     "top": ["Apple", "Bergamot", "Lemon", "Cinnamon"],
     "middle": ["Watery Notes", "Plum", "Orange Blossom", "Cardamon"],
@@ -91,7 +91,7 @@
   },
   {
     "name": "Rasasi Hawas Ice",
-    "family": "Fresh Spicy",
+    "family": "For Men",
     "img": "assets/hawas ice.jpg",
     "top": ["Apple", "Italian Lemon", "Sicilian Bergamot", "Star Anise"],
     "middle": ["Plum", "Orange Blossom", "Cardamon"],
@@ -100,7 +100,7 @@
   },
   {
     "name": "Rasasi Hawas Black",
-    "family": "Woody Chypre",
+    "family": "For Men",
     "img": "assets/hawas black.jpg",
     "top": ["Bergamot", "Pineapple", "Grapefruit"],
     "middle": ["Patchouli", "Cedarwood", "Jasmine"],
@@ -109,7 +109,7 @@
   },
   {
     "name": "Rasasi Hawas Fire",
-    "family": "Marine Amber",
+    "family": "For Men & Women",
     "img": "assets/Hawas fire.jpg",
     "top": ["Clary Sage"],
     "middle": ["Marine Notes", "Egyptian Jasmine"],
@@ -118,7 +118,7 @@
   },
   {
     "name": "Rasasi Hawas Thunder",
-    "family": "Spicy Woody",
+    "family": "For Men",
     "img": "assets/hawas thunder.jpeg",
     "top": ["Bergamot", "Ginger", "Apple"],
     "middle": ["Spicy Notes"],
@@ -127,7 +127,7 @@
   },
   {
     "name": "Rasasi Hawas Atlantis",
-    "family": "Aquatic Fruity",
+    "family": "For Men & Women",
     "img": "assets/hawas atlantis.jpg",
     "top": ["Bergamot", "Lemon", "Apple", "Cinnamon"],
     "middle": ["Watery Notes", "Plum", "Cardamom", "Orange Blossom"],
@@ -136,7 +136,7 @@
   },
   {
     "name": "Rasasi Hawas Diva",
-    "family": "Floral Fruity",
+    "family": "For Women",
     "img": "assets/hawas diva.jpg",
     "top": ["Red Fruits", "Rhubarb", "Lychee"],
     "middle": ["Rose", "Frankincense", "Cedar"],
@@ -145,7 +145,7 @@
   },
   {
     "name": "Rasasi Hawas Malibu",
-    "family": "Fresh Fruity",
+    "family": "For Men & Women",
     "img": "assets/hawas malibu.jpg",
     "top": ["Pineapple", "Orange", "Grapefruit"],
     "middle": ["Orris", "Amber", "Lavender"],
@@ -154,7 +154,7 @@
   },
   {
     "name": "Rasasi Hawas Verde",
-    "family": "Citrus Aromatic",
+    "family": "For Men",
     "img": "assets/hawas verde.jpg",
     "top": ["Lime", "Rosemary", "Green Apple"],
     "middle": [],
@@ -163,7 +163,7 @@
   },
   {
     "name": "Rasasi Hawas Kobra",
-    "family": "Citrus Woody",
+    "family": "For Men",
     "img": "assets/hawas kobra.jpg",
     "top": ["Ginger", "Bergamot", "Tangerine"],
     "middle": ["Green Tea", "Cinnamon", "Neroli"],
@@ -172,7 +172,7 @@
   },
   {
     "name": "Rasasi Fattan",
-    "family": "Woody Aromatic",
+    "family": "For Men",
     "img": "assets/fattan.jpg",
     "top": ["Grapefruit", "Bergamot", "Pink Pepper"],
     "middle": ["Vetiver", "Cedar", "Patchouli", "Lily-of-the-Valley"],
@@ -181,7 +181,7 @@
   },
   {
     "name": "Armaf Club de Nuit Intense Men",
-    "family": "Leathery Fruity",
+    "family": "For Men",
     "img": "assets/cdnim edp.jpg",
     "top": ["Lemon", "Pineapple", "Bergamot", "Black Currant", "Apple"],
     "middle": ["Birch", "Jasmine", "Rose"],
@@ -190,7 +190,7 @@
   },
   {
     "name": "Armaf Club de Nuit Iconic",
-    "family": "Aromatic Citrus",
+    "family": "For Men",
     "img": "assets/iconic.jpg",
     "top": ["Grapefruit", "Lemon", "Mint", "Pink Pepper", "Coriander"],
     "middle": ["Ginger", "Melon", "Jasmine", "Nutmeg"],
@@ -199,7 +199,7 @@
   },
   {
     "name": "Armaf Club de Nuit Sillage",
-    "family": "Floral Woody",
+    "family": "For Men & Women",
     "img": "assets/sillage.jpg",
     "top": ["Bergamot", "Lemon", "Lime", "Black Currant", "Violet Leaf", "Ginger"],
     "middle": ["Rose", "Iris", "Jasmine"],
@@ -208,7 +208,7 @@
   },
   {
     "name": "Armaf Club de Nuit Milestone",
-    "family": "Marine Fruity",
+    "family": "For Men & Women",
     "img": "assets/milestone.jpg",
     "top": ["Sea Notes", "Red Fruits", "Bergamot"],
     "middle": ["Violet", "White Woods", "Sandalwood"],
@@ -217,7 +217,7 @@
   },
   {
     "name": "Armaf Club de Nuit Maleka",
-    "family": "Floral Gourmand",
+    "family": "For Women",
     "img": "assets/maleka.jpg",
     "top": ["Lychee", "Bergamot", "Pink Pepper"],
     "middle": ["Orris"],
@@ -226,7 +226,7 @@
   },
   {
     "name": "Armaf Dunescape",
-    "family": "Aromatic Aquatic",
+    "family": "For Men & Women",
     "img": "assets/Dunescape.jpg",
     "top": ["Blood Orange", "Bergamot", "Mandarin", "Lemon", "Ginger", "Sage", "Juniper"],
     "middle": ["Ozonic Notes", "Apple", "Geranium", "Cashmeran", "Rose"],
@@ -235,7 +235,7 @@
   },
   {
     "name": "Afnan Turathi Blue",
-    "family": "Citrus Woody",
+    "family": "For Men",
     "img": "assets/turathi blue.jpg",
     "top": ["Citruses"],
     "middle": ["Amber", "Woodsy Notes"],
@@ -244,7 +244,7 @@
   },
   {
     "name": "Afnan Turathi Electric",
-    "family": "Citrus Fruity",
+    "family": "For Men & Women",
     "img": "assets/turathi electric.jpg",
     "top": ["Pear", "Pink Grapefruit", "Mandarin Orange", "Bergamot"],
     "middle": ["Orange Blossom", "Apple", "Cedarwood"],
@@ -253,7 +253,7 @@
   },
   {
     "name": "Afnan Supremacy Collector's Edition",
-    "family": "Fruity Chypre",
+    "family": "For Men",
     "img": "assets/Supremacy ce.jpg",
     "top": ["Pineapple", "Bergamot", "White Flowers", "Apple"],
     "middle": ["Orange Blossom", "Birch", "Amber"],
@@ -262,7 +262,7 @@
   },
   {
     "name": "Afnan Lynked Freedom",
-    "family": "Aromatic Spicy",
+    "family": "For Men",
     "img": "assets/Lynked Freedom.jpg",
     "top": ["Bergamot", "Grapefruit", "Sage"],
     "middle": ["Lavender", "Cardamom", "Juniper Berry"],
@@ -271,7 +271,7 @@
   },
   {
     "name": "Afnan 9pm",
-    "family": "Oriental Fougere",
+    "family": "For Men",
     "img": "assets/9pm.jpg",
     "top": ["Apple", "Cinnamon", "Wild Lavender", "Bergamot"],
     "middle": ["Orange Blossom", "Lily-of-the-Valley"],
@@ -280,7 +280,7 @@
   },
   {
     "name": "Afnan 9pm Rebel",
-    "family": "Fruity Woody",
+    "family": "For Men & Women",
     "img": "assets/9pm rebel.jpg",
     "top": ["Pineapple", "Granny Smith Apple", "Mandarin"],
     "middle": ["Oakmoss", "Cedarwood", "Vanilla"],
@@ -289,7 +289,7 @@
   },
   {
     "name": "Afnan Rare Reef",
-    "family": "Aromatic Fruity",
+    "family": "For Men & Women",
     "img": "assets/rare reef.jpg",
     "top": ["Orange", "Citron", "Mint", "Grapefruit", "Blackcurrant", "Coriander"],
     "middle": ["Apricot", "Violet Leaf", "Basil", "Rose"],
@@ -298,7 +298,7 @@
   },
   {
     "name": "French Avenue Aether Extrait",
-    "family": "Woody Citrus",
+    "family": "For Men & Women",
     "img": "assets/aether.jpg",
     "top": ["Green Apple", "Bergamot", "Mandarin Orange"],
     "middle": ["Cedar", "Petitgrain", "Cashmeran", "Violet"],
@@ -307,7 +307,7 @@
   },
   {
     "name": "French Avenue Atlantis Extrait",
-    "family": "Fresh Aquatic",
+    "family": "For Men & Women",
     "img": "assets/Atlantis.jpg",
     "top": ["Orange", "Mandarin Orange", "Lemon"],
     "middle": ["Watermelon", "Coconut"],
@@ -316,7 +316,7 @@
   },
   {
     "name": "French Avenue Nomad",
-    "family": "Oriental Spicy",
+    "family": "For Men & Women",
     "img": "assets/nomad.jpg",
     "top": ["Saffron", "Lemon"],
     "middle": ["Marine Notes", "White Flowers"],
@@ -325,7 +325,7 @@
   },
   {
     "name": "French Avenue Ripple",
-    "family": "Marine Woody",
+    "family": "For Men & Women",
     "img": "assets/ripple.jpg",
     "top": ["Lavender", "Bergamot", "Sage"],
     "middle": ["Marine Notes", "Sea Water", "Sandalwood", "Cedarwood"],
@@ -334,7 +334,7 @@
   },
   {
     "name": "French Avenue Jasmere",
-    "family": "Floral Woody",
+    "family": "For Men & Women",
     "img": "assets/jasmere.jpeg",
     "top": ["Linden Blossom", "Jasmine Sambac", "Broom"],
     "middle": ["Vetiver", "Orange Blossom", "Heliotrope"],
@@ -343,7 +343,7 @@
   },
   {
     "name": "French Avenue Liquid Brun",
-    "family": "Oriental Gourmand",
+    "family": "For Men",
     "img": "assets/liquid brun.jpg",
     "top": ["Cinnamon", "Orange Blossom", "Cardamom", "Bergamot"],
     "middle": ["Bourbon Vanilla", "Elemi"],
@@ -352,7 +352,7 @@
   },
   {
     "name": "French Avenue Safari Breeze",
-    "family": "Fresh Fruity",
+    "family": "For Men & Women",
     "img": "assets/safari breeze.jpg",
     "top": ["Grapefruit", "Blackcurrant", "Coconut"],
     "middle": ["Spearmint", "Jasmine"],
@@ -361,7 +361,7 @@
   },
   {
     "name": "Aromatix X French Avenue Platine Blanc",
-    "family": "Aromatic Fougere",
+    "family": "For Men & Women",
     "img": "assets/Platine Blanc.jpg",
     "top": ["Mint", "Lime", "Tonic Water", "Lemon"],
     "middle": ["Rosemary", "Black Currant", "Jasmine"],
@@ -370,7 +370,7 @@
   },
   {
     "name": "Aromatix X French Avenue Magnetiq",
-    "family": "Oriental Woody",
+    "family": "For Men & Women",
     "img": "assets/Magnetiq.jpg",
     "top": ["Lavender", "Bergamot", "Pink Pepper"],
     "middle": ["Orange Blossom", "Iris", "Musk", "Neroli", "Rosemary"],
@@ -379,7 +379,7 @@
   },
   {
     "name": "Khadlaj Island",
-    "family": "Tropical Fruity",
+    "family": "For Men & Women",
     "img": "assets/khadlaj island.jpg",
     "top": ["Pineapple", "Iris", "Ginger", "Cypress"],
     "middle": ["Coconut", "Woodsy Notes"],
@@ -388,7 +388,7 @@
   },
   {
     "name": "Khadlaj Shiyaaka Snow",
-    "family": "Spicy Woody",
+    "family": "For Men & Women",
     "img": "assets/shiyaaka snow.jpg",
     "top": ["Bergamot", "Mandarin"],
     "middle": ["Pink Pepper", "Nutmeg", "Neroli"],
@@ -397,7 +397,7 @@
   },
   {
     "name": "Khadlaj Karus Blue Spice",
-    "family": "Spicy Aromatic",
+    "family": "For Men",
     "img": "assets/karus blue spice.jpg",
     "top": ["Tea", "Bergamot"],
     "middle": ["Ginger", "Neroli"],
@@ -406,7 +406,7 @@
   },
   {
     "name": "Davidoff Cool Water EDT",
-    "family": "Fresh Aquatic",
+    "family": "For Men",
     "img": "assets/cool water edt.jpg",
     "top": ["Sea Water", "Lavender", "Mint", "Green Notes", "Rosemary", "Calone", "Coriander"],
     "middle": ["Sandalwood", "Neroli", "Geranium", "Jasmine"],
@@ -415,7 +415,7 @@
   },
   {
     "name": "Al Haramain Amber Oud Aqua Dubai",
-    "family": "Oriental Aquatic",
+    "family": "For Men & Women",
     "img": "assets/aqua dubai.jpg",
     "top": ["Bergamot", "Green Notes", "Mandarin Orange"],
     "middle": ["Melon", "Amber", "Black Currant", "Pineapple"],
@@ -424,7 +424,7 @@
   },
   {
     "name": "Al Haramain Amber Oud Gold Edition",
-    "family": "Oriental Gourmand",
+    "family": "For Men & Women",
     "img": "assets/gold edition.jpg",
     "top": ["Bergamot", "Green Notes"],
     "middle": ["Melon", "Pineapple", "Amber", "Gourmand Accord"],
@@ -433,7 +433,7 @@
   },
   {
     "name": "Carolina Herrera 212 Men",
-    "family": "Aromatic Fougere",
+    "family": "For Men",
     "img": "assets/212 men.jpg",
     "top": ["Green Notes", "Grapefruit", "Spices", "Bergamot", "Lavender", "Petitgrain"],
     "middle": ["Ginger", "Violet", "Gardenia", "Sage"],
@@ -442,7 +442,7 @@
   },
   {
     "name": "Ahmed Al Maghribi Azure Royal",
-    "family": "Fruity Floral",
+    "family": "For Men & Women",
     "img": "assets/azure royal.jpg",
     "top": ["Pear", "Sweet Notes", "Orange"],
     "middle": ["Freesia", "Rose"],
@@ -451,7 +451,7 @@
   },
   {
     "name": "Ahmed Al Maghribi Kaaf",
-    "family": "Fresh Floral",
+    "family": "For Men & Women",
     "img": "assets/kaaf.jpg",
     "top": ["Lavender", "Watermelon", "Sicilian Orange", "Red Fruits"],
     "middle": ["Lily of the Valley", "Jasmine", "Lotus"],
@@ -460,7 +460,7 @@
   },
   {
     "name": "Arabiyat Prestige Oud Al Layl Midnight Edition",
-    "family": "Oriental Woody",
+    "family": "For Men",
     "img": "assets/arabiyat midnight.jpg",
     "top": ["Apple", "Bergamot", "Lemon", "Cinnamon"],
     "middle": ["Watery Notes", "Plum", "Orange Blossom", "Cardamon"],
@@ -469,7 +469,7 @@
   },
   {
     "name": "Rayhaan Aquatica",
-    "family": "Fresh Aquatic",
+    "family": "For Men",
     "img": "assets/rayhaan acquatica.jpg",
     "top": ["Lime", "Coconut Milk", "Bergamot", "Mandarin"],
     "middle": ["Sugar Cane", "Jasmine", "Hibiscus", "Gardenia"],
@@ -478,7 +478,7 @@
   },
   {
     "name": "Rayhaan Tropical Vibe",
-    "family": "Tropical Fruity",
+    "family": "For Men & Women",
     "img": "assets/Tropical vibe.jpg",
     "top": ["Mango", "Pineapple", "Bergamot"],
     "middle": ["Coconut"],
@@ -487,7 +487,7 @@
   },
   {
     "name": "Rayhaan Nocturno Elixir",
-    "family": "Aromatic Woody",
+    "family": "For Men",
     "img": "assets/rayhaan nocturno elix.jpeg",
     "top": ["Lemon Zest", "Artemisia", "Bergamot", "Mint"],
     "middle": ["Geranium", "Lavender", "Pineapple"],
@@ -496,7 +496,7 @@
   },
   {
     "name": "Rayhaan Italia",
-    "family": "Aromatic Fougere",
+    "family": "For Men & Women",
     "img": "assets/rayhaan italina.jpeg",
     "top": ["Lavender", "Lemon", "Bergamot"],
     "middle": ["Honey", "Cinnamon", "Cashmeran", "Jasmine"],
@@ -505,7 +505,7 @@
   },
   {
     "name": "Rayhaan Lion",
-    "family": "Spicy Woody",
+    "family": "For Men",
     "img": "assets/rayhaan lion.jpg",
     "top": ["Lavender", "Pear", "Mint", "Bergamot"],
     "middle": ["Cinnamon", "Clary Sage", "Cumin"],
@@ -514,7 +514,7 @@
   },
   {
     "name": "Rayhaan Tiger",
-    "family": "Spicy Woody",
+    "family": "For Men",
     "img": "assets/tiger.jpg",
     "top": ["Nutmeg", "Clove", "Lemon"],
     "middle": ["Milk", "Rose", "Davana"],
@@ -523,7 +523,7 @@
   },
   {
     "name": "Rayhaan Wolf",
-    "family": "Gourmand Woody",
+    "family": "For Men",
     "img": "assets/wolf.jpg",
     "top": ["Cardamom"],
     "middle": ["Toffee"],
@@ -532,7 +532,7 @@
   },
   {
     "name": "Rayhaan Ocean Rush",
-    "family": "Fresh Aquatic",
+    "family": "For Men",
     "img": "assets/ocean rush.jpg",
     "top": ["Cascalone", "Aquozone", "Bergamot", "Mandarin"],
     "middle": ["Lavender", "Cypress", "Rosemary"],
@@ -541,7 +541,7 @@
   },
   {
     "name": "Nautica Voyage",
-    "family": "Fresh Aquatic",
+    "family": "For Men",
     "img": "assets/nautica voyage.jpg",
     "top": ["Green Leaves", "Apple"],
     "middle": ["Lotus", "Mimosa"],
@@ -549,8 +549,8 @@
     "prices": { "3": 160, "5": 240, "9": 370, "15": 560, "30": 990 }
   },
   {
-    "name": "Rave Now For Men",
-    "family": "Fruity Chypre",
+    "name": "Rave Now",
+    "family": "For Men",
     "img": "assets/rave now.jpg",
     "top": ["Pineapple", "Bergamot", "Apple", "Black Currant"],
     "middle": ["Birch", "Patchouli", "Moroccan Jasmine", "Rose"],
@@ -559,7 +559,7 @@
   },
   {
     "name": "Rave Now Women",
-    "family": "Fruity Floral",
+    "family": "For Women",
     "img": "assets/rave now women.jpg",
     "top": ["Red Fruits", "Orange"],
     "middle": ["Marshmallow", "Jasmine", "Lily of the Valley"],
@@ -568,7 +568,7 @@
   },
   {
     "name": "Zimaya Fatima Pink",
-    "family": "Floral Fruity",
+    "family": "For Women",
     "img": "assets/Fatima pink.jpg",
     "top": ["Rhubarb", "Bergamot", "Grapefruit", "Nutmeg"],
     "middle": ["Rose", "Jasmine"],
@@ -577,7 +577,7 @@
   },
   {
     "name": "Riiffs Freeze",
-    "family": "Fresh Spicy",
+    "family": "For Men & Women",
     "img": "assets/freeze.jpg",
     "top": ["Lemon Zest", "Spearmint", "Calabrian Bergamot", "Grapefruit", "Snow"],
     "middle": ["Ice", "Ginger", "Tea", "Sage"],
@@ -586,11 +586,20 @@
   },
   {
     "name": "Antonio Banderas Blue Seduction",
-    "family": "Fresh Aquatic",
+    "family": "For Men",
     "img": "assets/banderas blue seduction.jpeg",
     "top": ["Melon", "Bergamot", "Mint", "Black Currant"],
     "middle": ["Sea Water", "Green Apple", "Cappuccino", "Cardamom", "Nutmeg"],
     "base": ["Woodsy Notes", "Amber"],
     "prices": { "3": 130, "5": 200, "9": 300, "15": 450, "30": 850 }
+  },
+  {
+    "name": "Lattafa Opulent Dubai",
+    "family": "For Men & Women",
+    "img": "assets/opulentdubai.jpeg",
+    "top": ["Mango", "Grapefruit", "Lemon", "Ginger"],
+    "middle": ["Jasmine", "Cedarwood", "Violet"],
+    "base": ["Woodsy Notes", "Ambergris","Benzoin","Oakmoss"],
+    "prices": { "3": 160, "5": 240, "9": 370, "15": 560, "30": 990 }
   }
 ]
