@@ -601,5 +601,14 @@
     "middle": ["Jasmine", "Cedarwood", "Violet"],
     "base": ["Woodsy Notes", "Ambergris","Benzoin","Oakmoss"],
     "prices": { "3": 160, "5": 240, "9": 370, "15": 560, "30": 990 }
+  },
+  {
+    "name": "Arabiyat Prestige Marwa",
+    "family": "For Men",
+    "img": "assets/prestige_marwa.jpeg",
+    "top": ["Calabrian Bergamot","Lemon","Sicilian Orange"],
+    "middle": ["Nigerian Ginger", "Ceylon Cinnamon","Tunisian Neroli"],
+    "base": ["Ambroxan", "Chinese Black Tea", "Guaiac Wood"],
+    "prices": { "3": 230, "5": 340, "9": 570, "15": 880, "30": 1640 }
   }
 ]
